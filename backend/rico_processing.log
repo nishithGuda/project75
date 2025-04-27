@@ -1,0 +1,92 @@
+2025-04-23 14:30:23,008 - __main__ - INFO - Processing Rico base dataset from: C:/Users/nstar/Desktop/project/backend/data/combined
+2025-04-23 14:30:24,283 - utils.metadata_parser - INFO - Found 66261 screens with both screenshot and hierarchy
+2025-04-23 14:30:26,165 - utils.metadata_parser - INFO - Saved processed metadata to processed_data\processed\base\processed_metadata.json
+2025-04-23 14:30:26,238 - __main__ - INFO - Processing Rico semantic annotations from: C:/Users/nstar/Desktop/project/backend/data/semantic_annotations
+2025-04-23 14:30:27,640 - utils.semantic_parser - INFO - Found 66261 annotation files and 66261 images
+2025-04-23 14:40:05,517 - utils.semantic_parser - INFO - Saved processed semantic annotations to processed_data\processed\semantics\processed_semantics.json
+2025-04-23 14:40:05,571 - __main__ - INFO - Processing Rico RefExp dataset from Hugging Face
+2025-04-23 14:40:07,607 - utils.refexp_parser - INFO - Loading dataset 'ivelin/rico_refexp_combined' from Hugging Face
+2025-04-23 14:40:22,898 - utils.refexp_parser - INFO - Successfully loaded dataset with splits: ['train', 'validation', 'test']
+2025-04-23 14:40:22,898 - utils.refexp_parser - INFO - Processing train split with 390084 examples
+2025-04-23 14:48:15,183 - __main__ - INFO - Processing Rico base dataset from: C:/Users/nstar/Desktop/project/backend/data/combined
+2025-04-23 14:48:16,431 - utils.metadata_parser - INFO - Found 66261 screens with both screenshot and hierarchy
+2025-04-23 14:48:18,120 - utils.metadata_parser - INFO - Saved processed metadata to processed_data\processed\base\processed_metadata.json
+2025-04-23 14:48:18,177 - __main__ - INFO - Processing Rico semantic annotations from: C:/Users/nstar/Desktop/project/backend/data/semantic_annotations
+2025-04-23 14:48:19,375 - utils.semantic_parser - INFO - Found 66261 annotation files and 66261 images
+2025-04-23 15:00:02,657 - utils.semantic_parser - INFO - Saved processed semantic annotations to processed_data\processed\semantics\processed_semantics.json
+2025-04-23 15:00:02,706 - __main__ - INFO - Processing Rico RefExp dataset from Hugging Face
+2025-04-23 15:00:06,988 - utils.refexp_parser - INFO - Loading dataset 'ivelin/rico_refexp_combined' from Hugging Face
+2025-04-23 15:00:22,593 - utils.refexp_parser - INFO - Successfully loaded dataset with splits: ['train', 'validation', 'test']
+2025-04-23 15:00:22,593 - utils.refexp_parser - INFO - Processing train split with 390084 examples
+2025-04-23 15:03:00,945 - utils.refexp_parser - ERROR - Error processing RefExp dataset: 
+2025-04-23 15:03:01,885 - utils.dataset_integrator - INFO - Integrating datasets...
+2025-04-23 15:03:01,885 - utils.dataset_integrator - INFO - Adding metadata for 100 screens
+2025-04-23 15:03:01,901 - utils.dataset_integrator - INFO - Adding semantic annotations for 66261 screens
+2025-04-23 15:03:39,231 - utils.dataset_integrator - INFO - Saved integrated dataset with 66261 screens to processed_data\processed\integrated_dataset.json
+2025-04-23 15:03:39,231 - utils.dataset_integrator - INFO - Generating project data files...
+2025-04-23 15:03:39,310 - utils.dataset_integrator - INFO - Created example_metadata.json with 10 screens
+2025-04-23 15:03:39,344 - utils.dataset_integrator - INFO - Created history.json with 5 interactions
+2025-04-23 15:03:50,925 - utils.dataset_integrator - INFO - Created LLM training dataset with 4525 examples
+2025-04-23 15:03:50,925 - utils.dataset_integrator - INFO - Created RL training dataset with 4525 examples
+2025-04-23 15:03:50,928 - utils.dataset_integrator - INFO - Project data generation complete
+2025-04-23 15:03:50,929 - __main__ - INFO - Copying data to project structure
+2025-04-23 15:03:51,063 - utils.dataset_integrator - INFO - Copied project data files to backend\data
+2025-04-23 15:03:51,064 - __main__ - INFO - Processing complete. Output saved to processed_data
+2025-04-26 12:34:46,338 - __main__ - INFO - Processing Rico base dataset from: C:/Users/nstar/Desktop/project/backend/data/combined
+2025-04-26 12:34:48,514 - utils.metadata_parser - INFO - Found 66261 screens with both screenshot and hierarchy
+2025-04-26 12:34:50,818 - utils.metadata_parser - INFO - Saved processed metadata to processed_data\processed\base\processed_metadata.json
+2025-04-26 12:34:50,887 - __main__ - INFO - Processing Rico semantic annotations from: C:/Users/nstar/Desktop/project/backend/data/semantic_annotations
+2025-04-26 12:34:52,496 - utils.semantic_parser - INFO - Found 66261 annotation files and 66261 images
+2025-04-26 12:47:35,840 - utils.semantic_parser - INFO - Saved processed semantic annotations to processed_data\processed\semantics\processed_semantics.json
+2025-04-26 12:47:35,906 - __main__ - INFO - Processing Rico RefExp dataset from Hugging Face
+2025-04-26 12:47:38,422 - utils.refexp_parser - INFO - Loading dataset 'ivelin/rico_refexp_combined' from Hugging Face
+2025-04-26 12:47:54,296 - utils.refexp_parser - INFO - Successfully loaded dataset with splits: ['train', 'validation', 'test']
+2025-04-26 12:47:54,296 - utils.refexp_parser - INFO - Processing train split with 390084 examples
+2025-04-26 12:50:14,052 - utils.refexp_parser - ERROR - Error processing RefExp dataset: 
+2025-04-26 12:50:14,685 - utils.dataset_integrator - INFO - Integrating datasets...
+2025-04-26 12:50:14,686 - utils.dataset_integrator - INFO - Adding metadata for 100 screens
+2025-04-26 12:50:14,702 - utils.dataset_integrator - INFO - Adding semantic annotations for 66261 screens
+2025-04-26 12:50:36,268 - utils.dataset_integrator - INFO - Saved integrated dataset with 66261 screens to processed_data\processed\integrated_dataset.json
+2025-04-26 12:50:36,269 - utils.dataset_integrator - INFO - Generating project data files...
+2025-04-26 12:50:36,316 - utils.dataset_integrator - INFO - Created example_metadata.json with 10 screens
+2025-04-26 12:50:36,340 - utils.dataset_integrator - INFO - Created history.json with 5 interactions
+2025-04-26 12:50:43,029 - utils.dataset_integrator - INFO - Created LLM training dataset with 4525 examples
+2025-04-26 12:50:43,030 - utils.dataset_integrator - INFO - Created RL training dataset with 4525 examples
+2025-04-26 12:50:43,031 - utils.dataset_integrator - INFO - Project data generation complete
+2025-04-26 12:50:43,032 - __main__ - INFO - Copying data to project structure
+2025-04-26 12:50:43,172 - utils.dataset_integrator - INFO - Copied project data files to backend\data
+2025-04-26 12:50:43,172 - __main__ - INFO - Processing complete. Output saved to processed_data
+2025-04-26 13:01:21,740 - __main__ - INFO - Processing Rico base dataset from: C:/Users/nstar/Desktop/project/backend/data/combined
+2025-04-26 13:01:22,979 - utils.metadata_parser - INFO - Found 66261 screens with both screenshot and hierarchy
+2025-04-26 13:01:24,487 - utils.metadata_parser - INFO - Saved processed metadata to processed_data\processed\base\processed_metadata.json
+2025-04-26 13:01:24,539 - __main__ - INFO - Processing Rico semantic annotations from: C:/Users/nstar/Desktop/project/backend/data/semantic_annotations
+2025-04-26 13:01:27,164 - utils.semantic_parser - INFO - Found 66261 annotation files and 66261 images
+2025-04-26 13:13:15,076 - utils.semantic_parser - INFO - Saved processed semantic annotations to processed_data\processed\semantics\processed_semantics.json
+2025-04-26 13:13:15,135 - __main__ - INFO - Processing Rico RefExp dataset from Hugging Face
+2025-04-26 13:13:16,987 - utils.refexp_parser - INFO - Loading dataset 'ivelin/rico_refexp_combined' from Hugging Face
+2025-04-26 13:13:20,492 - utils.refexp_parser - INFO - Successfully loaded dataset
+2025-04-26 13:13:20,492 - utils.refexp_parser - INFO - Processing train split
+2025-04-26 13:13:36,521 - utils.refexp_parser - INFO - Found 28 unique screens after checking 100 samples
+2025-04-26 13:13:37,796 - utils.refexp_parser - INFO - Checked 100 samples in train
+2025-04-26 13:13:37,796 - utils.refexp_parser - INFO - Processing validation split
+2025-04-26 13:13:52,489 - utils.refexp_parser - INFO - Found 100 unique screens after checking 100 samples
+2025-04-26 13:13:53,066 - utils.refexp_parser - INFO - Checked 100 samples in validation
+2025-04-26 13:13:53,067 - utils.refexp_parser - INFO - Processing test split
+2025-04-26 13:14:05,862 - utils.refexp_parser - INFO - Found 100 unique screens after checking 100 samples
+2025-04-26 13:14:06,453 - utils.refexp_parser - INFO - Checked 100 samples in test
+2025-04-26 13:14:06,468 - utils.refexp_parser - INFO - Saved processed RefExp data to processed_data\processed\refexp\processed_refexp.json
+2025-04-26 13:14:06,469 - utils.refexp_parser - INFO - Processed 228 screens with RefExp data
+2025-04-26 13:14:06,487 - utils.dataset_integrator - INFO - Integrating datasets...
+2025-04-26 13:14:06,488 - utils.dataset_integrator - INFO - Adding metadata for 100 screens
+2025-04-26 13:14:06,489 - utils.dataset_integrator - INFO - Adding semantic annotations for 66261 screens
+2025-04-26 13:14:07,811 - utils.dataset_integrator - INFO - Adding RefExp data for 228 screens
+2025-04-26 13:14:34,917 - utils.dataset_integrator - INFO - Saved integrated dataset with 66261 screens to processed_data\processed\integrated_dataset.json
+2025-04-26 13:14:34,918 - utils.dataset_integrator - INFO - Generating project data files...
+2025-04-26 13:14:34,972 - utils.dataset_integrator - INFO - Created example_metadata.json with 10 screens
+2025-04-26 13:14:34,987 - utils.dataset_integrator - INFO - Created history.json with 5 interactions
+2025-04-26 13:14:35,192 - utils.dataset_integrator - INFO - Created LLM training dataset with 248 examples
+2025-04-26 13:14:35,192 - utils.dataset_integrator - INFO - Created RL training dataset with 248 examples
+2025-04-26 13:14:35,194 - utils.dataset_integrator - INFO - Project data generation complete
+2025-04-26 13:14:35,194 - __main__ - INFO - Copying data to project structure
+2025-04-26 13:14:35,252 - utils.dataset_integrator - INFO - Copied project data files to backend\data
+2025-04-26 13:14:35,252 - __main__ - INFO - Processing complete. Output saved to processed_data

@@ -1,0 +1,82 @@
+[
+  {
+    "query": "click on the link",
+    "screen_id": "10073",
+    "action": {
+      "type": "click",
+      "target_idx": 0,
+      "confidence": 0.9,
+      "target_bbox": {
+        "xmax": 0.5907407402992249,
+        "xmin": 0.40833333134651184,
+        "ymax": 0.25312501192092896,
+        "ymin": 0.15052083134651184
+      }
+    },
+    "feedback": "success"
+  },
+  {
+    "query": "select the arrow which is to the right side of calendar",
+    "screen_id": "1015",
+    "action": {
+      "type": "click",
+      "target_idx": 0,
+      "confidence": 0.9,
+      "target_bbox": {
+        "xmax": 0.9629629850387573,
+        "xmin": 0.9342592358589172,
+        "ymax": 0.4755208194255829,
+        "ymin": 0.45885416865348816
+      }
+    },
+    "feedback": "success"
+  },
+  {
+    "query": "go to all countries",
+    "screen_id": "10219",
+    "action": {
+      "type": "click",
+      "target_idx": 0,
+      "confidence": 0.9,
+      "target_bbox": {
+        "xmax": 0.3212963044643402,
+        "xmin": 0.012962962500751019,
+        "ymax": 0.18541666865348816,
+        "ymin": 0.1354166716337204
+      }
+    },
+    "feedback": "success"
+  },
+  {
+    "query": "select date",
+    "screen_id": "10468",
+    "action": {
+      "type": "click",
+      "target_idx": 0,
+      "confidence": 0.9,
+      "target_bbox": {
+        "xmax": 0.2666666805744171,
+        "xmin": 0.024074073880910873,
+        "ymax": 0.2958333194255829,
+        "ymin": 0.234375
+      }
+    },
+    "feedback": "success"
+  },
+  {
+    "query": "click on the symbol to the left of heart symbol",
+    "screen_id": "1056",
+    "action": {
+      "type": "click",
+      "target_idx": 0,
+      "confidence": 0.9,
+      "target_bbox": {
+        "xmax": 0.182407408952713,
+        "xmin": 0.10462962836027145,
+        "ymax": 0.9182291626930237,
+        "ymin": 0.8744791746139526
+      }
+    },
+    "feedback": "success"
+  }
+]

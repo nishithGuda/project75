@@ -1,0 +1,10 @@
+{
+  "element_selector_test_accuracy": 0.978232044198895,
+  "rl_agent_epsilon_final": 0.9511101304657719,
+  "training_params": {
+    "epochs": 20,
+    "batch_size": 32,
+    "llm_data_size": 4525,
+    "rl_data_size": 4525
+  }
+}

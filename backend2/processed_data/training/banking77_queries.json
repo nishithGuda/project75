@@ -1,0 +1,5002 @@
+[
+  {
+    "text": "I want to start using my card, how do I activate it?",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "What did you do with my money??? I just topped up, I saw the money was there, but now it's gone!! What did you do with it?",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "Tell me why my card payment has been declined.",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "Why was I charged a fee for my withdrawal?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "Can I change or hold different currency?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "My card has gone missing.",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "I've already sent the money out and still have not received money in my account.",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "Can I transfer my salary if its in GBP?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "I would like some more physical cards, what is my limit?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "My plans may change so I may need to change from GBP to AUD.",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "Will I get charged for sending out more cards?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "There seems to be a couple of payments listed in the app I know weren't made by me. Is there a possibility someone has access to my card? Can you find out what's going on?",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "What process should I use to transfer money into my account?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "Hi, I tried to top up my card today and it did not work. I have tried it in the past and it worked just fine but it won't do it anymore. Can you help me out?",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "I can't find my phone and I'm worried someone is going to use it",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "Would I be able to use SWIFT transfers?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "Why was a fee charged to me for transferring money?",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "If I want to select a new PIN what do I do?",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "I have been charged two times for one transaction.",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "How come I did not get a virtual card yet?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "How do I troubleshoot my contactless?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "Will I get charged for topping up with an international card?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "What ATMs use this card?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "I thought I was going to receive more currency?",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "I have checked my statements multiple times, but my refund that I requested a while back is not showing on my account. Is there a reason for this? Can I get some help getting my money back from this transaction?",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "Why does it still charge me even though I was unable to withdraw money from the ATM?",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "Your exchange rates come from where?",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "If my phone was stolen, do I need to do anything?",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "Please help me with my card payments which keeps getting reverted whenever i do online shopping. I am having this problem since last two weeks.",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "I want to top up with my Apple Watch.",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "How can I prove I am me?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "I don't see a money transfer yet",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "Why do you need to know so much about me for my account?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "I have cash deposit to my account but it is experiencing a problem",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "A percentage fee was charged to my withdrawal.",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "what is this fee for transfering",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "How can correct Top up with the app to work correctly?",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "How do I link one of your card that I already have?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "How can I fix my bank transfer to show up on my bank account?",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "What if my top up doesn't go through?",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "I made a transfer and the receiver said an amount was received, but less than the right amount. I now have to transfer more to get the remainder to the receiver. Can you tell me about this. What's been going on?",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "What do I have to do to get a Visa card?",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "What is the time frame for european transfers?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "What does it mean when a transfer is \"pending\"?",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "Why haven't I gotten my payment yet?",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "Why is the exchange rate for my payment incorrect?",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "Please help me as my online payment is getting declined since yesterday while i am trying to purchase something online.",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "How do I change my currency to another?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "I was out today looking forward to paying with my brand new card, turns out the payment just kept getting declined. This is pretty sad, what's going on?",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "What is going on with it saying my card payment was declined?",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "I have used all my PIN tries, what now?",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "Why was I charged an extra fee when using an ATM?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "What stopped my transfer, from being accepted?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "\nI can't seem to be able to use my card\n\n\n",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "Why can't I transfer money to a beneficiary",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "What countries do you operate in?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "I was charged the wing amount for an item.",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "Why do you guys need to verify my identity?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "Any place that takes Mastercard would be fine.",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "Am I able to get this shipped to China?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "The app doesn't think it's me.",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "is there a way to see where funds come from",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "I need more money in my account. Can I add more by transferring?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "My top up is giving me problems. What is wrong with it?",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "how do i find top up for cash deposit",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "Hold old do my kids have to be to use the service?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "Would reinstalling the app solve the problem?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "Why isn't my top up showing?  Was the money reversed?",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "Can I set the account to auto top-up?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "I was overcharged a pound.",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "How do I get my card into the app?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "What fees to you have for top ups?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "My card is expiring soon, How do I order a new card?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "Why is my card payment still listed as pending?",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "I want a mastercard",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "I believe i was charged for making a withdrawal after i went grocery shopping. Are you guys charging for this now?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "I am unable to use my card for some reason.",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "How do I find the code needed in order to verify my top-up card?",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "Where can i find the virtual card?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "The app reverted my top up",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "My transfer failed, why?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "Whats the process of tranfering money into an account?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "Why doesn't my card work for any transactions?",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "What are the steps needed to top up with Apple Pay?",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "What are the steps to get my card back that was kept by the ATM?",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "Why am I not allowed to add a certain beneficiary?",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "The ATM keeps declining my Transaction . I tried two different ATMs already Would you please check if everything is okay with my account?",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "I got charged twice",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "I want some extra physical cards.",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "If I exchange currencies frequently, is there a discount?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "How do I know how much money I will have when I travel abroad?",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "I wasn't able to do a transfer to an account",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "How much is a physical card?",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "I am having issues using contactless payments, could my card be damaged?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "My top up didn't go through",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "I haven't received my PIN yet. Do I need to get it from you?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "I need mastercard as well as visa",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "How do you top-up using cash?",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "Where will I get my card?",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "Is a physical charge extra",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "What is the identity verification process?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "My money disappeared right when I tried to top up",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "Has my top-up been cancelled?",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "I want to open an account for my children",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "When will my cheque process?",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "Which documents do I need for this identity check?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "Can you provide me a disposable virtual card?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "I bought an item then noticed the exchange rate was wrong.",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "I must make a transfer from China and it is urgent. How long before the transfer is complete?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "stolen phone, what should i do",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "can i use check to top up",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "Somebody is taking money out of my account without my approval in another town separate from me. Please place a freeze on my account until I can make it to the bank.",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "How can I set a new pin.",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "Do top-up limits exist?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "my atm transaction was wrong",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "how do I find the code to verify the top up card?",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "My payment was stopped",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "It appears my top-up is still pending.",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "What is the reason I got rejected for using my disposable virtual card to pay a subscription to the gym?",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "When shipped to the US how long is delivery time?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "Why am I being charged for ATM cash withdrawals? The only reason I use it is because it's been free! Now you expect me to pay for them, and how much is that going to cost me?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "I tried to access money earlier but the machine seems not to be working. After looking, the transaction actually shows to still being process. Can you find out what is going on here? I don't want to be charged for some money I never got.",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "My card was stolen and used to make several purchases. Please freeze my card so no one can use it.",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "I just did a money transaction but its not showing they received it",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "Can I change my card PIN?",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "Can I use my virtual card for recurring monthly payments?",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "How do I validate my identity.",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "i have yet to get my pin",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "What fees are there for adding money using an international card",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "I have a transaction and would like to know if I it's cancelable?",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "Why would my transfer be declined?",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "What identification is required to activate my card?",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "What can I do to make my physical card work?",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "i need to proof my identity to you why and how?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "What's the limit for auto top-up?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "What is my identification used for?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "I had everything lined up to make a transfer, and then it rejected it.",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "I need to refund my item, can you please help?",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "Explain the payment that was declined!",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "I dont have identification",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "My transfer to my account is missing.",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "My cash withdrawal isnt showing on my account",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "My rate is not right when I used my card in a different country's money.",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "I want a refund for an item",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "I see a duplicate payment.",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "I thought crypto top up with something you offer. This is not working. The money has been deducted from my account. Can you find out what's going on?",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "What is the status of my top up?",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "I locked myself out of my account, how do I unblock my PIN?",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "I cannot get my disposable virtual card to work",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "What is this extra pound charge for?",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "I made a check deposit but the cash hasn't arrived in my account yet.",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "Are EUR exchanges allowed?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "what cards and currencies are accepted?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "lost my card in atm",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "I haven't received my virtual card yet!!",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "Why is there a fee added to my statement?",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "If I don't have all my documents can they still verify my identity?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "How are your exchange rates calculated?",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "My payment was declined",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "What information am I going to have to have in order to do a transfer with my card?",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "Why did I get charged extra?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "I am so angry right now!  I went to the ATM and did not get the correct amount of money I chose to withdraw.  How could this happen?  I need my money and want to know how I can get it ASAP!",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "I think the exchange rate was incorrect.",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "Is there a way to get a virtual card?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "Am I charged if I make a top-up?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "The app says I made a cash withdrawal that I didn't make",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "What are the steps to reset my passcode?",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Can I use your services without access to the app?",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "Is the PIN sent in another message?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "How do I link my card in the app.",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "Why is there an identify check?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "Hello, I am buying a flat and need the inital payment for the mortgage to go through. It keeps showing up as error, what is going on? Can you please help me make this transfer?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "I am under the impression that my top up is still pending",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "I do not see the card PIN anywhere?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "What do I do if I have forgotten my passcode?",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Which flat currencies are supported for holding and exchange?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "How do I go about changing my address?",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "It looks like my top-up was cancelled",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "What do you demand for identity verification?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "the money i transferred didnt arrive",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "I keep being asked to verify my identity. Is this normal?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "Is my transfer pending?",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "I have a problem with a transfer. It didn't work. Can you tell me why?",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "How do I report my card as lost or stolen?",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "Why have I not received a virtual card yet?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "Why wont the ATM give me cash?",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "I NEED HELP WITH MY CARD!!!!! please. It keeps getting declined when I try to use it. I have tried a few times to use it and it keeps getting rejected. I have no idea why.",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "How can my friend send money to me?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "The exchange rate is incorrect for my payment.",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "Which merchants accept this card?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "I have a duplicate payment on my account",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "what is going on, i have entered my passcode and its not working",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "What information do I need to see my source of money?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "I just checked and my payment was cancelled, why?",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "What currencies can I exchange?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "No option to top up with a cheque ?",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "I do not recognise this card payment.",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "Can I see my available money?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "I sent money for my rent to my landlord but she is claiming it hasn't arrived in her account  Can you trace the transfer I made to make sure it arrived so I can provide proof I sent it and that it has been deposited?",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "What is the status of my card's delivery?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "Is it possible to have a discount for exchanging currency frequently?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "My refund for a purchase hasn't  cone through yet.",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "Are you Visa or Mastercard?",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "Can the card be mailed to Europe?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "I just saw the exchange rate you use, but it's so bad that I can't believe that it's the official interbank exchange rate! Is this truly the official interbank exchange rate?",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "I need to change my card PIN.",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "I cannot get my card out of the ATM.",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "Where can I find out where my funds came from?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "What currencies can be used for top up?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "How do I open an account for my children?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "Do you offer cards for those in other countries?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "What is the identity check for?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "I was charged the wrong exchange rate on a purchase",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "how to delete account, not happy",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "Can I get a Visa instead of a MasterCard?",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "What's the pending length for credit transactions? I've had one in my pending category now for days and it won't move to processed.",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "I think that there is a payment on my card that I did not authorize.  I don't recognize the name attached to the transaction.",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "How long before transferred money shows up?",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "How do I go about getting hold of a virtual card?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "Can I use my American Express card with Apple Pay?",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "Hi, Could you please help me as someone has stolen my wallet few hours ago. And a withdrawal is made, please help immediately. As i don't want to suffer more.",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "How long does it take to transfer from china? Is there a way to transfer it quickly, I need it urgently?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "How do I know what exchange rate I will get?",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "I am not satisfied with your service.  Close my account.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "How can I setup automatic top-up?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "What countries do your accounts support?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "There is a payment in my app that I did not make.  I have not used that card all day  Please reimburse my money.",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "how much is it to exchange currency",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "I am having trouble activating my card.",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "I was double charged at a restaurant can you take the second charge off?",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "Why am I being charged a hidden fee?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "I have my residency in the US, but I would love to get a card.",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "I think someone is using my card without my permission!",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "how come my withdrawal rate is wrong for my cash withdrawal",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "Can I transfer money to my card via bank-transfer?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "The machine only paid me a hundred when I wanted 20",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "I need to report a stolen card",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "Is there a charge for using an European bank card for top up?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "Is there a limit for top ups?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "Can you  tell me how to get AUD not GBP?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "I can't get my card out of the ATM, what should I do now?",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "I used my pin too many times.",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "What is the amount of time transfers usually take from the UK? I had just completed a transfer and nothing seems to be showing up so I need to be sure things are alright.",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "How do I link the new card that I just got from you guys?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "Where can I do a cash withdrawal?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "Will you charge me for topping up with a European card?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "One of my card payments, I don't recognise the name of the merchant.",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "I tried to buy something and it was declined and my transfers keep getting declined, Why?",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "i didnt put that money in my account",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "I no longer want to keep this account.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "The app is telling me that I am not me.",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "My card payment was cancelled it seems.",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "The ATM I'm standing in front of only gave me 10 pounds rather than the 30 pounds I wanted. The app shows I took out 30 pounds also. What do I need to do to fix this?",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "What are the limitations on the disposable cards?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "My card is stuck inside the ATM, what am I supposed to do?",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "Could not complete transfer, states 'declined'",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "I don't know what my passcode is, can you help?",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Do I get any sort of discount on volume for a lot fo currency exchanges?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "How come I can't put money in my top up account?",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "Does it cost anything to transfer money for a top-up?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "Where can virtual cards be ordered?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "Can I top-up automatically?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "My card was used without my permission, what do I do?",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "If I top-up by using a trasfer are there charges that applied?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "Where do I find how to top off with a check?",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "I got a new address and need to change my old one.",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "Can I unblock my pin using the app?",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "Is there a way to track my card?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "I wish to be able to top up with cash.",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "What limits are the to top-ups?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "Where can I activate my card?",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "I don't recognize this payment at all!  Help!",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "I sent money to my family last Friday but they don't have it.",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "I was declined when I tried to withdraw cash!",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "A withdraw I tried to make at the ATM was declined I don't know why.",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "How do I find my new pin?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "I need to deposit my virtual card, how do i do that.",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "Help me terminate and close my account.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "I am paid by my employer in GBP; do I need to do anything in the app to indicate this?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "How do I use the app to exchange currencies?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "How can I get disposable virtual cards?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "What should I do if I think someone stole my details and used my information to make some transactions?",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "When should I expect my card to arrive?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "How do I report a cash withdrawal that wasn't me?",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "Is auto top up available?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "Is my card payment reverted?",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "Does it cost me to add cash?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "why top up is not working even if I got my American Express in Apple Bay?",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "Why was I charged an extra fee when paying with card?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "Can you explain why my transfer was unsuccessful?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "Where can I find Mastercard ATMs?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "There's a cash withdrawal I am certain I did not make",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "I got some cash out of the ATM over the holiday and it seems that I've been grossly overcharged. I wouldn't have done that if I knew of these outrageous charges!",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "Do you receive SWIFT transfers?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "Do you have any accounts for children ?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "My card payment has failed.",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "What's the earliest time to receive my card?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "I would like to top up my account with a bank transfer, is that allowed?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "I bought something that I need a refund for.",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "How do I know which payments I make will have additional fees? Where can I find this information online?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "And do you have virtual cards instead of physical ones?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "How come when I tried to pay contactless at the bus it didnt work?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "My PIN seems to be blocked, help me access it?",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "I am wondering about a transfer from a different country that doesn't show up yet?",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "I deposited cash into my account and I'm having trouble seeing it on my account.",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "I used my card to make a payment and wondered why the payment was reverted?",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "There's a problem - I bought something about a week or two ago but just today the payment somehow came back into my account! I already received the item though, what's going on here?",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "A WD was just made on my account, but it was not me and I still have my card.  What to do?",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "Where can I find my fund information?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "I got a message that my transfer is not possible.  What is happening?  I need this to go through please.",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "What do I do if my card expires soon?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "What kind of security protects my money?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "What should I do once my card expires?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "What is this direct debit in my statement?",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "Can you please reactivate my card?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "I need to activate my card.",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "I am getting an error stating my transfer is not possible while transferring money. Let me know the issue as its the first time i am getting error, earlier it used to work.",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "It's been more than a week since I had a return charged to my card, why hasn't it showed up?",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "Do I need to set a limit on auto top-up?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "The ATM wouldn't allow me to withdraw money",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "Why did you charge me extra when I withdrew cash?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "I tried to withdraw cash from the ATM machine and it did not work. Can you tell me why?",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "How many disposable virtual cards can you have?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "why was i charged a fee to transfer",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "Where is my top-up verification code?",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "I have a pending transaction",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "Lost password",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Show me where I can see the PIN?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "How long will it take for a bank transfer to show up on my account? It's been a couple hours but I havnt seen anything yet. Also it's from a UK account if that makes any difference.",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "What are the uses for disposable cards?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "How do I report fraud on my card?",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "Why do you need my name and ID",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "Why didn't my transfer get to the recipient?",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "i am not a premium customer but i want a virtual card, how do i get it",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "It won't let me prove my identity.",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "Where can I use this card?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "A card has been sent to me, how do I track it?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "My new landlord is a lier and is trying to rip me off by saying I've not paid my rent when I have paid my rent.  What is going on?  They say the money hasn't got to them but I see it going out of my account.  Can you check that the money went to the right place?",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "I topped up my account but the app failed to process it.",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "I made a transfer and they haven't received the money I sent them.",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "How many times can I auto top-up?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "What kind of fee is there to top-up my account?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "Do you have an age limit?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "Can I be charged for exchanging foreign currency?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "How long does it take for the transfer to go through?",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "Am I able to return an item for a refund?",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "i need to trace a deposit",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "Please tell me how to change my pin.",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "Someone took my card without permission",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "It looks like my top up didn't work.  Why?",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "I need to order a new card, can you please direct me to the virtual cards?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "I was told to verify my identity, how do I do that?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "How do I change my account details?",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "I'd like to open an account for my kids can I do that?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "I need a new card.",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "I seem to be having trouble with my Google Pay Top. Can you please help?",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "What are the disposable cards used for?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "I have duplicated transactions on my statement",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "To deliver to the US, how long will it take?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "Can I schedule future top ups?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "Will the duplicated payment be refunded?",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "Why do we need to verify top-up?",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "Can you send me the actual card?",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "Can I top-up any amount I wish on any given day?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "In the app I see a direct debit that I don't recognize.",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "My client was converting their Russian ruble into UK pound currency when they noticed their bill was much too high for the exchange. What happened?",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "I can't get my Google Pay Top to work. Are there any issues on your end?",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "I would like to exchange currencies, how do I go upon it?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "Can I top-up by cheque?",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "Is there a way to tell where the money came from?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "You will hear back from us about your verification results in 10 minutes to a one hour timeframe.  If these verification results do fail, please double-check to make sure your images are clear and have no glare or blur; your photos need to be fully readable.  You need to be 18 years of age or older and a resident of Switzerland or the European Economic Area to create an account.",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "What method do you use for the exchange rate?",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "Why can't I withdraw cash from this ATM?",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "My new card came in.  How do I activate?",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "Why was I charged twice?",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "I have zero dollars in my account. Can I submit additional funds via bank transfer?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "There is a debit transaction on my statement that I did not make",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "I'll send a check to top up my account",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "I prefer Mastecard.",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "Is this open to residents of all countries?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "How can I pay for top-ups?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "Why was my card payment reversed?",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "What is the process for activating my card and using it?",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "Can I use check to deposit?",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "What are the various currencies and cards that you offer support for?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "What time will a transfer from the US take?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "I lost my card n need a new one.",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "When will I get a virtual card? I haven't gotten one yet",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "I'm in China and need a new card. Please help.",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "Physical cards are what I need more of",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "How can I cancel my transfer?",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "Hello-Can you please help me get a refund from this merchant?  I ordered a product and would like to return it. I have been unsuccessful in getting the merchant to return my request for the past several days.  I understand it can take up to 45 days to process the dispute and issue a refund, however, if this can be expedited faster it would be very helpful to me.",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "I tried using a check to update my balance, but it isn't work? Is something wrong?",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "When will a refund post to my account?",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "My card needs to be topped up.",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "I live in Germany. Is that one of the countries you are in? What other countries are you in?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "Hi! What documents can I use to verify my identity?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "how long does it take for a transfer from Europe to go through?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "I need an accurate exchange rate, when I make my withdrawals.",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "how long will it take for my transfer to stop pending",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "Help!  What should I do?  My phone was stolen yesterday.",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "Where did my extra fee for the transfer come from?",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "Is there a limit on disposable cards?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "There's a card payment with a name I don't recognize",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "How long should I have to wait before I see the transfer in my account?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "I did a payment with my card but seem that didn't work, it's still listed as pending since a while ago. When does this actually go through?",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "The ATM at Metro bank on High St. Kensington didn't return my card, and the bank is now closed. How do I get back a card swallowed by an ATM?",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "How long will it take to get to the US?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "What is delivery speed to the United States?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "Is a SWIFT transfer acceptable?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "I attempted to top-up with my card this morning, but the transaction was unsuccessful. I received the card two days ago and was successful using it previously. Could you please help me?",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "Can you walk me through how I can edit some of my personal information?",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "How is the current exchange rate?",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "Can I get a new pin number at any ATM using my card?",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "How can I get funds into my account from my American Express?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "How will I get my card?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "The app shows Direct Debit payments that I didn't make",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "How much does a transfer cost?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "I tried to withdraw cash and got declined, why is that?",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "Are there virtual cards",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "For some reason my card payment hasn't worked. what can I do to look into that?",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "How old do you have to be to open an account?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "How can I prove who I am?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "Are there directions to get a new passcode if I forgot mine?",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Can you tell me where to find top up by cash deposit?",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "When will my deposit from this morning show up?",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "Can I choose when my card is delivered?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "I'd like to know what you guys look at to decide an exchange rate",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "I made a transfer and according to the receiver \"they haven't received the right amount\" Its lesser than it should be.Now I have to transfer more money to make up for the missing amount . Can you please help me about this,what should be done",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "Can I have a new card shipped to China?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "Can it add money automatically while travelling",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "I noticed the exchange rate for cash withdrawal isn't right.",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "I don't have my passcode to access the app.",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "The contactless payments are not working.",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "Can I have my card delivered on Tuesday?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "There is a cash withdrawal on my statement that I don't recognize",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "Should i uninstall the app before i try it again?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "What's the deal with verifying the top-up?",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "How can I add money to my account from another account I have?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "How can my new card be renewed?",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "I made a cash withdrawal and it is still listed as a pending transaction.",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "Why is my 'top up' not showing up in my wallet?",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "Can my password be reset if I do not have it?",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Explain to me why a transfer would be declined.",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "How much can I top up in a day?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "What do I need to do for a refund?",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "My card payment has been on pending forever. What is the problem? It should have gone through at some time by now.",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "Is it possible to cancel my transfer?",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "I am having a problem with verifying my identity.",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "Why won't my virtual card work?",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "I need immediate assistance in canceling a transfer which was a mistake. Please help me quickly so this does not go through.",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "How long will it take for me to get my card?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "Please inform me how to get a new card as mine is about to expire.",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "Is my card accepted anywhere?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "How many disposable  cards are available per account?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "Are extra charges added for sending out additional cards?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "My new card isn't in my app, how do I get it in there?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "How can I order my card?",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "Money was taken out without my consent,",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "I need to transfer money into my account, and I don't know how to do that.",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "Hi! A seller that I requested a refund from a long time ago has yet to send the money into my account, even though I keep checking it. Can the seller be contacted by you guys to see what's going on?",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "Where is my card PIN?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "I have a transfer waiting.",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "How can i get a refund for something i just bought?",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "Can I tell what business will take this card?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "Are there specific ATM's that I can draw money from?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "Since I got married, I need to change my name.",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "I've lost my card. What can I do about that?",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "Why won't the machine accept my card anymore?",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "I forgot what my pin number is and now am blocked can you help me get in?",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "When will my transfer post to my account?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "I don't remember my password",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Using your app, would I be able to exchange between USD and GBP?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "How do I link my new card?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "I made an international purchase, but the exchange rate was wrong",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "I would like a  physical card sent to me.",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "How long until transfers from Europe go through?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "How can I convert currencies?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "I looked at my statement and found a payment I and found a mistake.",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "There are fraudulent charges that I didn't make on my card. Can you please put in the safeguards necessary to stop this from happening anymore?",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "A mortgage payment I'm making is giving me an error message.  This is the first time I'm making this payment and want to know what's wrong.",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "Tell me how I can verify a card top-up.",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "I made a card payment by my card but it failed. Please let me know when the payment will get completed as its still pending.",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "I think my top up may have been reverted, what do I do?",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "I've been to several different countries, can I exchange the cash with a discount for a large transaction?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "My app statement shows I took out cash from an ATM but I did not. What can I do?",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "What is the maximum top up?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "I need to add more funds to my card today because it keeps being declined, and I need to use it immediately. Can you fix this or tell me alternatives?",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "Do you offer account's for minors?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "How do I exchange currencies using this app?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "Where do i verify a top-up card?",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "Why wont the other bank take my money?? Is it not good enough?? There's sufficient funds but I keep getting denied a standard transfer. Ive tried 5 times!",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "Can I order another card?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "Are there businesses that don't accept this card?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "I'm supposed to be getting a refund but it hasn't shown up, now what?",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "Why are you asking so many questions about who I am",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "Why isn't my disposable virtual card working?",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "I have lost my card, but need to place an online order! How do I get a virtual card instantly?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "I attempted to top up my account but it's been frozen in a pending state for well over an hour now! Is this normal? I'm a new customer and this is my first time doing this. I assumed it would be done quicker than this.",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "Waiting for the cash I deposited this morning still",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "Where do I order a disposable virtual card?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "I want to choose a new PIN.",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "Editing my personal details",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "Who can request disposable cards?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "How much do I need to pay for a transfer?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "How can I lookup the source for my available money?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "Everything seems fine with my account, so why did it decline my payment?",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "The money disappeared after I topped up my account.",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "I tried to pull cash from an ATM but it wouldn't let me.",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "Do you support fiat currencies?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "top up by my card is that possible?",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "Need help with a stolen card.",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "My contactless stopped working today for no good reason. It's not working no matter where I try to use it. Can you please help me fix it?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "Is there any limits I should know about if I'm going to use a disposable virtual card?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "I would like to use top-up with my Apple Pay.",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "Tell me why there is a fee for a card payment.",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "Why am I charged a fee for getting cash?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "I see I was charged extra when I used the card.  I am not sure why, please tell me why.",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "Is American Express supported for adding money into my account?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "I found my card that I thought I had lost, I need to reactive it, please help.",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "i need a refund right away but the funds aren't available in my account",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "I would like to request a card.",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "Someone used my card without my permission.",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "I left my phone somewhere and can't use the app.",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "I want to inactivate my account.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "On the card that is coming, what's the tracking info?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "Why can't I complete the transfer?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "What is your maximum top up limit per day?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "Why have I been charged a fee for cash withdrawal?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "Can you activate my card pls",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "My top is still pending.",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "At what age can my children use your service?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "I'm having trouble proving my identity",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "Are my contactless settings correct? I tried to use it today but it wasn't working.",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "Can my friend send me money if it is not in US dollars?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "I was wondering about transferring money into my account and how it works.  Can you tell me about that?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "Can I use top-up with Apple pay?",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "This morning, I tried to send money to my friends several times but each time the transfer fails.  Why does it keep failing?  The transfer gets rejected but I do not know what is causing it to be rejected.",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "I would like to know if I can top up with Google Pay.",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "How do I get this damn virtual card to work?",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "What happened to my cash deposit?",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "Where can I modify my details?",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "Why would my payment still show as pending?",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "I need to cancel a transaction please!",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "How much does it cost to get more cards?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "Could you send me and up date on the arrival of my card?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "what can I do if I got my American Express in Apple Bay but top up is not working?",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "I entered the wrong pin too many times and now I think it's blocked. What do I do?",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "Can I order a card?",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "Asked for $100 but only got $20. Why would this happen?",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "Is there a top-up limit that I have to stay under during a given period of time?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "Why do I have a strange payment on my statement?",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "Is there a problem that makes my payments show pending?",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "Could you please tell me how to activate my new card?",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "My card activation attempt failed.",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "Is my card activated?",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "I am not satisfied with your company.  Close my account.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "I made a payment that is not yet complete.",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "How to receive transfers from my employer when I get paid in GBP?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "Someone stole my account, there's a withdrawal but it wasn't me, can we put a stop to it please?",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "I guess exchange rate for my payment was not correct, as i charged extra on the last saturday.",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "Salary in GBP has been received. Does it need to be configured into another place?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "There is a payment with my card which i definitely did not make by me .Never seen that it before.",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "Why was a fee changed for my transfer?",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "The app does not believe that I am myself",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "I am not in the UK can i get a card?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "What is the process for setting up and account for my child?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "How long is the wait for a money transfer to show up?",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "My cash transaction isn't showing on my account",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "Can I stop a transaction?",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "What do I do if my payment was reverted?",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "Why have I been charged twice?",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "Why am i being charged for withdrawing cash funds?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "why do I need to show ID",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "Why is my transfer taking so long. I thought it was supposed to only take 1 day if I made a transfer to someone. Can you wee what went wrong?",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "Is there a top-up limit?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "I would like to know how to work out where my funds came from?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "Where do you mail physical cards?",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "Why aren't my payment funds available to me?",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "Do you know the rate of exchange?",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "How long before a bank transfer shows up in the account?",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "What's the web address to unblock my pin?",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "I have lost my phone or it has been stolen.",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "My PIN is unlocked, what do I do?",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "Next time maybe let people know that buying things from another country costs extra. I used my card to purchase an item from another country and I was charged for the item and also an extra fee it looks like. I wasnt aware of this and I think I should get a refund.",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "What should I do if I can't use my card?",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "What is this strange payment in my account?",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "i want to get my salary deposited as pesos?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "Why is my transfer stuck on pending?",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "Are there any charges for European bank card for top up?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "Are their fee's for top ups?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "How do I verify the top up?",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "Why am I unable to withdraw my money through this card?",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "My statement has not shown my refund.",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "How do I return something for a full refund?",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "I sent a payment, but the person I sent it to says they don't have it",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "I have been charged twice on my statement.",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "I need a refund on a direct debit that shows in the app because I did not make it.",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "My phone was stolen yesterday, can you help me with this?",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "I am unable to prove my identity",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "I need to verify my funds.",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "I am unable to transfer money. I believe it is not working because it states it was declined.",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "What is the process for getting an actual physical card?",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "I wanna revert a transaction i did this morning.",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "My identity verification isn't working",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "What is not accepted in order for me to top up my account?",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "Where can I use my Mastercard?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "My transaction went through but I was charged a fee. Why?",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "Why has my card been charged an extra pound?",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "Can I add to my account using a cheque?",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "How do I go about getting an actual card?",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "I'm looking to get an additional card.",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "My card didn't go through.  It doesn't make sense.  You told me that everything was ok.",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "I believe that someone is using my card without my knowledge!",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "On what do you base your exchange rates?",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "A Bank ATM did not give my card back. What do I do now?",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "Yesterday I topped up my card. Why didn't it complete as it still pending?",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "My beneficiary didn't receive my transfer",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "The ATM took my card.",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "What kind of ATMs would this card be accepted at?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "I recently bought an item using my card and I was charged an extra fee why is this?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "How can I request cash back? The ATM gave me the wrong amount that I've been charged though...",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "Can my friend send me money?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "Will my GPB update my salary",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "I'm wanting to get a Visa card today.",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "Hi, I tried topping up for the first time today (I'm a new customer), and the transaction has shown as pending for the last half an hour. Can you fix it?",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "Please help me, as my topup amount has been reverted, i did it correctly. I think there is some defect in system.",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "I left my card at a restaurant and now its missing.",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "My disposable virtual card wouldn't process my payment?",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "Something's wrong my card won't work.",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "How do I delete my account? I am dissatisfied with the service.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "If i want to change my pin number can I directly from an ATM?",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "I have been double charged for a couple of things this week, and would appreciate a refund for the duplicate charges.",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "I did not receive my purchase, how do I cancel it?",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "Where should I look for my PIN number at?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "hello I have lost my phone and I'm worried someone's going to steal money from me",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "How do I make my card show up in the app?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "What do I have to do to cancel a transfer?",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "I want to close my account. The service you provide is unsatisfactory to me.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "I don't recognize some transactions.  Is someone else using it?",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "What is the reason when I tried to pay contactless at the bus, it didnt work?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "Can I withdraw money from another bank and transfer it into my empty account?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "This isn't fair! I thought transfers could be made for free. I just made  a purchase online from abroad and now see some strange fee that I've never seen before.",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "Can I use my virtual card to complete transactions for memberships?",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "are there any exchange fees",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "I transferred some funds but I don't see it",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "Where can I see where funds came from?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "My card is stuck inside the ATM.",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "Do you deliver the PIN separately?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "Visa or Mastercard?",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "Do you have EUR currency available for me?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "How do I add money to my card?",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "I'm hoping you can answer my question about a pending transfer that I've had for a while now.  I know that all of the account details are correct, so why is it taking so long to go through?",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "I needed to send my friends some money urgently.  I tried multiple times to transfer the money this morning, but the transfer keeps failing.  Can you tell me why the transfer is getting rejected?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "Why is my beneficiary not working?",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "Hello, I see that I have been charged an extra $1 on my app.  Could you please provide me with a reason for this charge?",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "My top up is still pending",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "My card is missing!  Help!",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "I'm going on a trip soon and I needed to convert my Russian ruble to UK pounds, but when I did, your company charged me above the exchange rate. Did you mess up my transaction?",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "What is the charge for using a Top up card in the US?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "How many disposable cards can I have at one time?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "Are refunds allowed for certain items.",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "I have a transaction that shows multiple times.",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "I need my PIN unlocked.",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "I live in the UK. Can I get a card?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "Which ATM's can I use to make a withdrawal?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "Can I top up with cash",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "My ID verification hasn't gone through yet, but can I use my account anyway?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "I tried to make a transfer like five different times. Why won't your system let me? Is it broke?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "Are cards issued to people living in the US?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "How long does it take for the money to show up in my account?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "Why is my cash withdrawal still showing as pending?",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "I see non-received cash in my app.",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "My throwaway virtual card won't work",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "Is exchanging currencies a feature of the app?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "How much more do you charge for currency exchange?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "Are transfers not free? I didn't know I would be charged for transfers.",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "I am trying to find out how to exchange currency X with currency Y.",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "Why wasn't it obvious that you charge for payments? If you put the fees in an easy to read format, this could have been avoided.",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "I visited the ATM but got less money than what I requested. Why?",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "Please help me find my top-up verification code",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "I am trying to complete a transfer but I keep getting an error message.",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "can other people use the app to add money to my account",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "Why is my exchange rate wrong?",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "Can I use a different currency with my salary?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "I can't see a top-up top-up verification code.",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "Please explain how disposable virtual card work.",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "What is the maximum number of transactions that I can put on a disposable card?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "How can I cancel a transaction to a wrong account?",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "Where did the money I deposit go??",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "Am I able to change my PIN at certain cash machines?",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "can you assist me in activating my card?",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "Why would a card payment be declined?",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "Can you find out why my credit card didn't process payment? It was declined for top up so what's the deal?",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "I'm confused. My contactless is suddenly not working anywhere that I try to use it. How do I fix it?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "How can my account have money transferred into it?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "I'm not verifying my identity.",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "limits on top ups",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "What kind of businesses will take my card?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "What can you use the disposable cards for?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "Are there fees for adding money with an International card?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "If I can't choose my card type will I be able to use it everywhere?",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "Can I use my card in another institutions ATM?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "Is there anyway to use a cheque to top up?",
+    "intent": 58,
+    "intent_name": "top_up_by_cash_or_cheque"
+  },
+  {
+    "text": "My card must have used my card as there are some transactions that I haven't done myself..",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "Can you tell me the restrictions for the disposable cards?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "Could you assist me in finding my lost card?",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "How do I get my card on the app?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "Is the 1 pound charge I can see an error or an incorrect entry?",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "How much time do transfers take? I sent money to a friend who needs it fast. It's been hours, and the money has not gone through.",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "The expiration date on my card is very soon, and I need to get a new one.  What are the price and delivery options for my replacement card?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "I am upset with your service.  Please delete my account.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "How long will it take to verify my account?",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "beneficiary transfer problems?",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "I found a direct debit I would like to dispute",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "Is there a way yo change my PIN?",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "What is your shipping policies for cards?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "Is it free to exchange currency?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "I do not feel comfortable verifying my identity.",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "If I wanted to change my PIN, how would I do that?",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "Are there any top-up limits?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "What do I do with my \"decline\" message on a transfer?",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "Hello, Please look into this matter urgently. As i have lost my wallet and i can see one withdrawal, now i do not want to loose more money.",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "My Netflix subscription says that there is an issue with my card information, but I thought everything was fine. Why would it be declined?",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "Where is the card PIN located?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "Tell me why my transfer is declined.",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "How long does my top up pending last?",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "What are the reasons for a declined transfer?",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "What's the limit on total number of cards I can have?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "Is there an extra fee to exchange currencies?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "I got a declining message during a transfer? please tell me why",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "My card payment is just showing up as pending since forever, what's going on with that, it should be going through at some point?",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "When I got cash I was charged an extra fee!  Explain!",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "How do I tell if my top up was reverted?",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "There are incorrect charges on my account, there was a WD that was made by someone else.  I still have my card though.",
+    "intent": 20,
+    "intent_name": "cash_withdrawal_not_recognised"
+  },
+  {
+    "text": "I haven't received the PIN yet.",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "I have left my card at my parents house. Can you send me a spare one please to use in the meantime?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "How do I change to AUD from GBP?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "What locations can I get money from?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "I am worried that too much time has gone by for a transfer to be completed.",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "What's a verification code?",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "If I top up by card, what options do I have re: currency and card type?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "do I need to verify my identity before I can use my card?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "I can't get any money from my account.",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "My address needs to be changed.",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "Are there any express fees if i want my new card faster?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "My virtual car is not working.",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "I would like to know the countries you are offer services in?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "I did a bank transfer to top up, but the money is not available.",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "I'm panicking!  I lost my card!  Help!",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "When I got cash, my exchange rate was off.",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "How long is US delivery?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "how to recover my passcode",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "There is a potentially fraudulent direct debit on my account.",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "There is a payment that I was charged two times for.",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "from where are coming your exchange rates?",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "My actual card isn't functioning.",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "I see a direct debit payment on my app that I did not do",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "I would like to make a purchase, however my card has been declined. I would like to ask the reason for this. The past two weeks, the card has been working fine.",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "Please help me with the amount that i have withdrawn from the ATM today, the ATM has given me wrong sum of amount, and i could see that the app is displaying the greater amount than taken out.",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "The balance does not appear to have updated.",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "What currencies are available for my use in holding and exchange?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "Why hasn't my ID been verified?",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "Can I put my old card back in the app?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "I made a transfer and the receiver did not get the right amount its lesser than what it should be,Now I have to transfer more money to make up for the missing amount . Can you please help me about this, what should be done",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "Give me a refund now!! I am still waiting.",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "How long will my ATM withdrawal be pending?",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "I only have one more US credit card, is it accepted?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "My refund is still pending",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "Hi, I am disappointed to see such a bad exchange rate and hope you can assist me. Would you be able to confirm the official interbank exchange rate for me?",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "Please help me with my card.  It won't activate.",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "When will my account receive the money?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "Can you tell me the names of the fiat currencies that I can use at your institution?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "What do you use disposable cards on?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "Do you take both Visa and Mastercard?",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "Will you accept my credit card, it my only one.",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "The exchange rate that was applied for an international purchase was wrong.",
+    "intent": 17,
+    "intent_name": "card_payment_wrong_exchange_rate"
+  },
+  {
+    "text": "Who can have access to top up my account?",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "Will you be adding more currencies in the future?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "I am in the EU. Can I get one of your cards?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "Is there a pay structure for currency exchanges?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "On a card payment, why is there a fee?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "when should I receive my refund",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "I can't get my virtual card to work at all",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "how many uses are the disposable cards good for?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "Am I able to track the card that was just sent to me?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "I was attempting to top up with my card but the money has vanished!",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "Is the 1 pound charge going to be reimbursed on my card?",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "I am adding money, what currencies do you accept to do this?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "There is a direct debit that I didn't set up, what should I do?",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "Can I re-link a lost card with the app?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "It seems like a transfer is pending.",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "Are top-ups unlimited?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "What are the auto-top up policies?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "Why is  my  top  up for  my  new account  not  instant",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "I made a purchase with my card and I was charged a fee for using it",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "When I went to $100, all the machine would give me was $20.",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "Can I use my account without verifying identity?",
+    "intent": 74,
+    "intent_name": "why_verify_identity"
+  },
+  {
+    "text": "I want to top up by using a credit card, which ones do you support?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "I need a second card, can I have more than one?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "When I used one of the ATMs in the city centre today, I tried to take out some money, but for whatever reason, the machine declined my card. Just checked it out in my account and that amount is still showing as pending! Is there any way that you can cancel this transaction, because I did not receive any money whatsoever from the ATM",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "Can I exchange currency for different types?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "Google Pay Top up isn't working",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "Are there charges for using a bank card to top up",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "how do you get exchange rates",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "I noticed my card payment was cancelled, can you tell me why?",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "Why has my card been declined?",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "I cant find my card.",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "Can I get both a Visa and a Mastercard from you?",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "Why was my account assessed a fee?",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "Explain why my card payment wouldn't go through.",
+    "intent": 25,
+    "intent_name": "declined_card_payment"
+  },
+  {
+    "text": "If I was travelling abroad, would I be able to hold currencies in euros?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "Why hasn't my balance been updated? I've deposited a few cheques some days ago!",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "Please explain your exchange rate policy.",
+    "intent": 32,
+    "intent_name": "exchange_rate"
+  },
+  {
+    "text": "I want a disposable virtual card, how do I do that?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "Why is it failing to top-up?",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "Why is my withdrawal wrong? I took out $100 but only received $20.",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "I don't understand what a disposable virtual card is, can you help?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "I tried to top up, but the funds show up as pending. I thought it was instant?",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "I need help proving that this is really me and to verify my identity.",
+    "intent": 68,
+    "intent_name": "unable_to_verify_identity"
+  },
+  {
+    "text": "Hello I made a bank account transfer from the UK. The transfer was a couple hours ago, nothing has shown up yet.  Can you check to see if everything okay. Please.",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "I have exceeded the number of PIN attempts",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "I can't get the card itself to work.",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "How are top-ups verified?",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "How will I know my pin number?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "I didn't make a payment at this business.",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "Do you have support for flat currencies?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "Why can't I transfer money to a beneficiery?",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "While getting cash, I was charged a fee.",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "My exchange rate is wrong when I get cash.",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "I wanted to take out $100 but I only got $20.",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "I transferred some money but it hasn't arrived yet",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "My top-up is taking a while to process!",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "Why isn't my refund showing up in my statement?",
+    "intent": 51,
+    "intent_name": "Refund_not_showing_up"
+  },
+  {
+    "text": "Help me cancel a transaction.",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "I need to delete my account.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "Why did I get charged twice for the same thing",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "What do I do after the ATM takes my card.",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "Do I have to use bank approved ATM's",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "How can I get a refund for an item I purchased but has not yet arrived?",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "Why was I charged extra when transferring?",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "I need to add money to my account. Can I do so via bank transfer?",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "How do I track the card you sent to me?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "The exchange rate for my withdrawal was wrong.",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "Instead of GBP, how do I exchange for AUD?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "How do I discontinue my account?",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "I have to make several disposable cards per day.",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "Why are you not accepting my transfer!! I've tried a couple times already now and it just keeps showing an error message",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "Can I have a supplementary card?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "how do I get top up to work for my card",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "Verifying the top-up seems like a hassle.",
+    "intent": 71,
+    "intent_name": "verify_top_up"
+  },
+  {
+    "text": "I would like to cancel a transfer",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "I want to replace my current PIN.",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "How can my friends top up my account?",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "what is the fee for a transfer into my account",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "Why have I not gotten my new card?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "The card is non-functional.",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "When do I get my PIN?",
+    "intent": 38,
+    "intent_name": "get_physical_card"
+  },
+  {
+    "text": "I will be traveling and want money to be added automatically in certain intervals. Is this possible?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "can i add funds  with a card from the united states",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "Why did I have to pay extra because I paid with my card?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "Someone is making transactions on my account, I think they took my card information.",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "Can I unblock my PIN in the app?",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "What is this extra fee that I got when I used my card to pay?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "Why can't I see a transfer to my account?",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "I was charged an incorrect exchange rate for a withdrawal.",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "Where do I go to edit my personal details on my account?",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "Why can I not do a  transfer",
+    "intent": 7,
+    "intent_name": "beneficiary_not_allowed"
+  },
+  {
+    "text": "What caused my cash withdrawal to be declined?",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "Will this card work at any ATM?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "Can I receive my salary with this in another currency?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "My ATM withdrawal is taking forever",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "Hi. Please can you help me fix a double charge on my card? I'm looking at my transactions and this restaurant I went to earlier in the week has charged me twice! Please remove the additional charge for me.",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "I have found my lost or stolen card, would I still have to activate the new card that was sent to me through the mail in order to access my account?",
+    "intent": 13,
+    "intent_name": "card_linking"
+  },
+  {
+    "text": "why has a transaction to a friend been delayed?",
+    "intent": 66,
+    "intent_name": "transfer_not_received_by_recipient"
+  },
+  {
+    "text": "Does it matter which card I use",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "I've forgotten my passcode. Can I reset?",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Can you tell me if I can hold money in several currencies?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "What do I need to know about topping up?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "Can I use google pay for topping -up",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "I'm at the ATM right now and it only allowed me to withdraw 10 pounds instead of my requested 30. What's going on? How can I fix this?",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "Hi, I am on vacation in Spain and someone stole my bag with my phone and wallet with cards and everything. Can you block it ASAP and then I want to order a new one also ASAP.",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "My statement has a charge that shouldn't have been made.",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "Are there limits to businesses that will accept this card?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "When will my transfer finish pending?",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "Am I able to do a SWIFT transfer?",
+    "intent": 56,
+    "intent_name": "top_up_by_bank_transfer_charge"
+  },
+  {
+    "text": "What are all the fiat currencies that are supported for both exchange and holding?",
+    "intent": 36,
+    "intent_name": "fiat_currency_support"
+  },
+  {
+    "text": "Why is my contactless not working?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "How long does it take for a money transfer to show up?",
+    "intent": 48,
+    "intent_name": "pending_transfer"
+  },
+  {
+    "text": "I needed cash from the ATM but I couldn't get it.",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "Why is my disposable card not working?",
+    "intent": 72,
+    "intent_name": "virtual_card_not_working"
+  },
+  {
+    "text": "can i get a physical card online",
+    "intent": 43,
+    "intent_name": "order_physical_card"
+  },
+  {
+    "text": "Can I use my apple watch to top up?",
+    "intent": 2,
+    "intent_name": "apple_pay_or_google_pay"
+  },
+  {
+    "text": "Can I order a second card?",
+    "intent": 39,
+    "intent_name": "getting_spare_card"
+  },
+  {
+    "text": "What's the closest place to withdraw money?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "When does my transfer from the US arrive in my account?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "I was wondering, Can I get my pay in another currency?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "Currently I can't get my card to work.",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "Which ATMs accept this circuit board ?",
+    "intent": 3,
+    "intent_name": "atm_support"
+  },
+  {
+    "text": "I would like to order a virtual card, where can I get one?",
+    "intent": 40,
+    "intent_name": "getting_virtual_card"
+  },
+  {
+    "text": "I'm going to cancel a purchase.",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "Can I open up an account for my child?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "Is it possible to exchange USD and GBP on the app?",
+    "intent": 33,
+    "intent_name": "exchange_via_app"
+  },
+  {
+    "text": "My phone is at the hotel.  How can I use the app?",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "Can I use my card wherever I want?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "why does my statement contain an extra fee?",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "MY transfer has still not appeared.",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "need my details changed",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "Am I able to add money into my account using my American Express?",
+    "intent": 54,
+    "intent_name": "supported_cards_and_currencies"
+  },
+  {
+    "text": "What is this extra fee on my statement.",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "How do I know when my card will expire?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "ATM is broken. It did not give me the full amount (30 pounds.)  I'm standing here with only 10 pounds and it's telling me it gave me 30 pounds. I need assistance now!",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "For the identity check, do I need any kind of documentation?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "I was charged for using my card?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "Can i receive transfers from my employer to this account?",
+    "intent": 50,
+    "intent_name": "receiving_money"
+  },
+  {
+    "text": "So, I am in the middle of purchasing a flat. I need the money for the first mortgage payment and it is not going through. I keep receiving an error. Can you find out what's going on and help me complete this transfer?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "the bank transfer was declined",
+    "intent": 27,
+    "intent_name": "declined_transfer"
+  },
+  {
+    "text": "About two days ago now, I made a transfer from France but it hasn't arrived yet. Is it possible that the international transfer just takes longer?",
+    "intent": 5,
+    "intent_name": "balance_not_updated_after_bank_transfer"
+  },
+  {
+    "text": "Explain the activation method for this card",
+    "intent": 0,
+    "intent_name": "activate_my_card"
+  },
+  {
+    "text": "Can both a Visa and Mastercard be received from you?",
+    "intent": 73,
+    "intent_name": "visa_or_mastercard"
+  },
+  {
+    "text": "I have a new email.",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "I forgot my code",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Why was there a transfer fee on my account?",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "Is there anything to do because my phone was stolen?",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "atm ate my card",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "I've never been to that store.  That's a fraudulent charge.",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "What are the benefits of a disposable card?",
+    "intent": 37,
+    "intent_name": "get_disposable_virtual_card"
+  },
+  {
+    "text": "i need help, i lost my card",
+    "intent": 41,
+    "intent_name": "lost_or_stolen_card"
+  },
+  {
+    "text": "This card payment isn't is recognition.",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  },
+  {
+    "text": "My funds must be verified",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "I think something went wrong, I didn't get the right amount.",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "I'm not sure if my pop-up went through.",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "I've used my account frequently over the last month to manage my payments from abroad for my new place. I noticed that my fees have suddenly increased. As a frequent customer, shouldn't I be rewarded rather than suddenly being subject to a new fee?",
+    "intent": 64,
+    "intent_name": "transfer_fee_charged"
+  },
+  {
+    "text": "I am blocked now because I entered the wrong pin, need help.",
+    "intent": 49,
+    "intent_name": "pin_blocked"
+  },
+  {
+    "text": "I think my card payment has been refunded",
+    "intent": 53,
+    "intent_name": "reverted_card_payment?"
+  },
+  {
+    "text": "Why did the transfer fail when I attempted to do it earlier?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "Someone else charged my card!",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "How long does it take for a cash withdrawal to show?",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "I don't know what this Direct Debit payment on my account is for.",
+    "intent": 28,
+    "intent_name": "direct_debit_payment_not_recognised"
+  },
+  {
+    "text": "Hi, I was looking over my card receipts for the past week and I realize I had a charge put through two times for the same single restaurant visit. Can one of the charges be removed so that I can get the money back that was mistakenly taken from my account?",
+    "intent": 63,
+    "intent_name": "transaction_charged_twice"
+  },
+  {
+    "text": "I need to exchange some foreign currency. What's the charge for doing that?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "Can the card was sen to me be tracked?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "Where can I see where my funds came from?",
+    "intent": 70,
+    "intent_name": "verify_source_of_funds"
+  },
+  {
+    "text": "What's the problem? My card keeps getting declined for top up. I need to know what is going on.",
+    "intent": 59,
+    "intent_name": "top_up_failed"
+  },
+  {
+    "text": "An extra fee of \u20ac1 was in my statement",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "Since when were there charges for taking out cash from my account? It's always been free for me to do this before.  How much are the charges going to be?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "What is the minimum age required to open an account with your service?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "I noticed a new fee on my account. I didn't know there were fees for these payments. What is the policy?",
+    "intent": 15,
+    "intent_name": "card_payment_fee_charged"
+  },
+  {
+    "text": "I need my card topped up,",
+    "intent": 62,
+    "intent_name": "topping_up_by_card"
+  },
+  {
+    "text": "Where can I modify my information?",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "I've been charged an extra \u00a31 and I don't know what it's for",
+    "intent": 34,
+    "intent_name": "extra_charge_on_statement"
+  },
+  {
+    "text": "Are there discounts for frequent currency exchanges?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "Tell me how to change my details.",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "How long does it take to verify a cash withdraw?",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "Who accepts the card?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "Why can I not make a transfer?",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "Is there a specific date i can have it delivered?",
+    "intent": 12,
+    "intent_name": "card_delivery_estimate"
+  },
+  {
+    "text": "Why wasn't my contactless accepted at the metro?",
+    "intent": 23,
+    "intent_name": "contactless_not_working"
+  },
+  {
+    "text": "How can I update my details since I moved?",
+    "intent": 30,
+    "intent_name": "edit_personal_details"
+  },
+  {
+    "text": "I would like to know how to transfer money into my account.",
+    "intent": 65,
+    "intent_name": "transfer_into_account"
+  },
+  {
+    "text": "Transfer has failed.",
+    "intent": 35,
+    "intent_name": "failed_transfer"
+  },
+  {
+    "text": "The ATM charged me an extra fee, Why?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "I have a disposable card, how many transactions can I make?",
+    "intent": 29,
+    "intent_name": "disposable_card_limits"
+  },
+  {
+    "text": "Is ordering a new card from China available?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "I got less cash than what I specified for through the ATM.",
+    "intent": 75,
+    "intent_name": "wrong_amount_of_cash_received"
+  },
+  {
+    "text": "An ATM machine didn't return my card.",
+    "intent": 18,
+    "intent_name": "card_swallowed"
+  },
+  {
+    "text": "I can't seem to be able to use my card",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "I live in the EU.  Can I order one of your cards?",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "What is the exchange fee that is charged?",
+    "intent": 31,
+    "intent_name": "exchange_charge"
+  },
+  {
+    "text": "I have a card payment which shows as pending",
+    "intent": 45,
+    "intent_name": "pending_card_payment"
+  },
+  {
+    "text": "Why is my ATM cash withdrawal not working?",
+    "intent": 26,
+    "intent_name": "declined_cash_withdrawal"
+  },
+  {
+    "text": "How can I information on my limit for top-ups?",
+    "intent": 60,
+    "intent_name": "top_up_limits"
+  },
+  {
+    "text": "There is unusual activity on my account and I believe someone took my card.",
+    "intent": 22,
+    "intent_name": "compromised_card"
+  },
+  {
+    "text": "Can I auto top up multiple times?",
+    "intent": 4,
+    "intent_name": "automatic_top_up"
+  },
+  {
+    "text": "How much is the charge to top up via credit card?",
+    "intent": 57,
+    "intent_name": "top_up_by_card_charge"
+  },
+  {
+    "text": "My card expires very soon.  What is the cost and delivery time to get a new one?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "My top-up was just cancelled.",
+    "intent": 61,
+    "intent_name": "top_up_reverted"
+  },
+  {
+    "text": "I need to reverse a transaction",
+    "intent": 8,
+    "intent_name": "cancel_transfer"
+  },
+  {
+    "text": "My card will not work",
+    "intent": 14,
+    "intent_name": "card_not_working"
+  },
+  {
+    "text": "How do I track the card you sent me?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "What retailers accept my card?",
+    "intent": 10,
+    "intent_name": "card_acceptance"
+  },
+  {
+    "text": "Supported countries",
+    "intent": 24,
+    "intent_name": "country_support"
+  },
+  {
+    "text": "I withdrew some cash, when is it going to show?",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "How old does one need to be?",
+    "intent": 1,
+    "intent_name": "age_limit"
+  },
+  {
+    "text": "I think my pin has been compromised, what do I do?",
+    "intent": 21,
+    "intent_name": "change_pin"
+  },
+  {
+    "text": "Is it possible to get a refund?",
+    "intent": 52,
+    "intent_name": "request_refund"
+  },
+  {
+    "text": "My atm withdraw is stillpending",
+    "intent": 46,
+    "intent_name": "pending_cash_withdrawal"
+  },
+  {
+    "text": "Seems like my top-up has not gone through",
+    "intent": 47,
+    "intent_name": "pending_top_up"
+  },
+  {
+    "text": "Why am I being charged to withdrawal money?",
+    "intent": 19,
+    "intent_name": "cash_withdrawal_charge"
+  },
+  {
+    "text": "I made a cash deposit and the balance wasn't updated.",
+    "intent": 6,
+    "intent_name": "balance_not_updated_after_cheque_or_cash_deposit"
+  },
+  {
+    "text": "Explain how to verify my identity?",
+    "intent": 69,
+    "intent_name": "verify_my_identity"
+  },
+  {
+    "text": "Where can I get a new passcode?",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "Can you tell me my code to get into the app?",
+    "intent": 44,
+    "intent_name": "passcode_forgotten"
+  },
+  {
+    "text": "I would like to cancel my account.",
+    "intent": 55,
+    "intent_name": "terminate_account"
+  },
+  {
+    "text": "I don't have my cell phone with me so I cannot access the system to complete the transaction.",
+    "intent": 42,
+    "intent_name": "lost_or_stolen_phone"
+  },
+  {
+    "text": "Can I track my card while it is in the process of delivery?",
+    "intent": 11,
+    "intent_name": "card_arrival"
+  },
+  {
+    "text": "How long does it take for a transfer to reach my account?",
+    "intent": 67,
+    "intent_name": "transfer_timing"
+  },
+  {
+    "text": "My card is about to expired what will happen?",
+    "intent": 9,
+    "intent_name": "card_about_to_expire"
+  },
+  {
+    "text": "I got cash abroad and need to check the exchange rate",
+    "intent": 76,
+    "intent_name": "wrong_exchange_rate_for_cash_withdrawal"
+  },
+  {
+    "text": "Payment I didn't do.",
+    "intent": 16,
+    "intent_name": "card_payment_not_recognised"
+  }
+]
