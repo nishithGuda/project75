@@ -1,0 +1,109 @@
+// Existing navigationClient.js with updates for new backend
+const API_BASE_URL = 'http://localhost:8000';
+
+/**
+ * Process a natural language query with visual data using the LLM
+ * @param {string} query - Natural language query from the user
+ * @param {string} screenshot - Base64 encoded screenshot
+ * @param {object} screenMetadata - Current screen metadata
+ * @returns {Promise<object>} - Response with suggested actions
+ */
+export const processQueryWithVisual = async (query, screenshot, screenMetadata) => {
+  try {
+    // Create the payload with all available information
+    const payload = {
+      query,
+      screen_metadata: screenMetadata
+    };
+    
+    // Only include screenshot if available (it can be large)
+    if (screenshot) {
+      payload.screenshot = screenshot;
+    }
+    
+    console.log('Sending query to LLM backend:', query);
+    
+    // Send request to the LLM backend
+    const response = await fetch(`${API_BASE_URL}/process-query-visual`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log('Received response from LLM:', result);
+    
+    return result;
+  } catch (error) {
+    console.error('Error processing visual query:', error);
+    
+    // Return error information
+    return {
+      success: false,
+      error: `Failed to connect to LLM backend: ${error.message}`,
+      actions: []
+    };
+  }
+};
+
+/**
+ * Send feedback about an action (for LLM learning)
+ * @param {string} element_id - ID of the element 
+ * @param {string} screen_id - Current screen ID
+ * @param {boolean} wasSuccessful - Whether the action was successful
+ * @returns {Promise<object>} - Response
+ */
+export const sendActionFeedback = async (element_id, screen_id, wasSuccessful) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/action-feedback`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        element_id,
+        screen_id,
+        success: wasSuccessful
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error sending feedback:', error);
+    return { success: false };
+  }
+};
+
+/**
+ * Get metrics about the LLM navigator's performance
+ * @returns {Promise<object>} - Response with metrics
+ */
+export const getNavigatorMetrics = async () => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/metrics`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error('Error getting metrics:', error);
+    return { success: false };
+  }
+};
