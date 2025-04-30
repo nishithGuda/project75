@@ -1,6 +1,5 @@
 # backend2/core/vectorstore.py
 import numpy as np
-import faiss
 from typing import List, Dict, Any, Optional
 import pickle
 import os
@@ -11,24 +10,17 @@ class VectorStore:
 
     def __init__(self, dimension: int = 384, index_path: Optional[str] = None):
         self.dimension = dimension
-        self.index = None
         self.elements = []
+        self.embeddings = []  # Store embeddings directly
         self.metadata = {}  # Store additional metadata for each element
 
-        if index_path and os.path.exists(f"{index_path}.index"):
+        if index_path and os.path.exists(f"{index_path}.data"):
             self.load(index_path)
-        else:
-            # Initialize a new FAISS index
-            # Inner product for cosine similarity
-            self.index = faiss.IndexFlatIP(dimension)
 
     def add_elements(self, elements: List[Dict], embeddings: np.ndarray) -> List[int]:
-        """Add elements and their embeddings to the index"""
+        """Add elements and their embeddings to the store"""
         if embeddings.shape[0] == 0 or len(elements) == 0:
             return []
-
-        if self.index is None:
-            self.index = faiss.IndexFlatIP(self.dimension)
 
         # Store starting index
         start_idx = len(self.elements)
@@ -36,13 +28,11 @@ class VectorStore:
         # Normalize embeddings for cosine similarity
         normalized_embeddings = self._normalize_embeddings(embeddings)
 
-        # Add embeddings to the index
-        self.index.add(normalized_embeddings)
-
-        # Store elements with their metadata
-        for i, elem in enumerate(elements):
-            # Store the element itself
+        # Store elements and embeddings
+        for i, (elem, embedding) in enumerate(zip(elements, normalized_embeddings)):
+            # Store the element and its embedding
             self.elements.append(elem)
+            self.embeddings.append(embedding)
 
             # Extract and store important metadata for this element
             element_id = elem.get("id", f"element_{start_idx + i}")
@@ -58,29 +48,35 @@ class VectorStore:
         return list(range(start_idx, start_idx + len(elements)))
 
     def search(self, query_embedding: np.ndarray, k: int = 5) -> List[Dict]:
-        """Search for elements similar to the query embedding"""
-        if self.index is None or self.index.ntotal == 0:
+        """Search for elements similar to the query embedding using cosine similarity"""
+        if len(self.elements) == 0 or len(self.embeddings) == 0:
             return []
 
         # Normalize query embedding
         normalized_query = self._normalize_embeddings(
-            query_embedding.reshape(1, -1))
+            query_embedding.reshape(1, -1))[0]
 
-        # Perform the search
-        distances, indices = self.index.search(
-            normalized_query, min(k, self.index.ntotal))
+        # Compute cosine similarity with all embeddings
+        similarities = []
+        for i, embedding in enumerate(self.embeddings):
+            similarity = np.dot(normalized_query, embedding)
+            similarities.append((i, similarity))
+
+        # Sort by similarity in descending order
+        similarities.sort(key=lambda x: x[1], reverse=True)
+
+        # Take top k results
+        top_k = similarities[:min(k, len(similarities))]
 
         # Create results with similarity scores
         results = []
-        for i, idx in enumerate(indices[0]):
-            if idx >= 0 and idx < len(self.elements):
+        for idx, similarity in top_k:
+            if 0 <= idx < len(self.elements):
                 # Get the element
                 element = self.elements[idx].copy()
 
-                # Add similarity score (convert distance to similarity)
-                # Already inner product for cosine
-                similarity = float(distances[0][i])
-                element["vector_score"] = similarity
+                # Add similarity score
+                element["vector_score"] = float(similarity)
 
                 # Add metadata if available
                 if idx in self.metadata:
@@ -113,40 +109,38 @@ class VectorStore:
         return True
 
     def save(self, path: str) -> bool:
-        """Save the index and metadata to disk"""
-        if self.index is None:
+        """Save the store and metadata to disk"""
+        try:
+            # Save the elements, embeddings, and metadata
+            data = {
+                "elements": self.elements,
+                "embeddings": self.embeddings,
+                "metadata": self.metadata,
+                "dimension": self.dimension
+            }
+
+            # Create directory if it doesn't exist
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+
+            # Save data
+            with open(f"{path}.data", "wb") as f:
+                pickle.dump(data, f)
+
+            return True
+        except Exception as e:
+            print(f"Error saving vector store: {e}")
             return False
 
-        # Save the FAISS index
-        faiss.write_index(self.index, f"{path}.index")
-
-        # Save the elements and metadata
-        data = {
-            "elements": self.elements,
-            "metadata": self.metadata,
-            "dimension": self.dimension
-        }
-
-        with open(f"{path}.data", "wb") as f:
-            pickle.dump(data, f)
-
-        return True
-
     def load(self, path: str) -> bool:
-        """Load the index and metadata from disk"""
+        """Load the store and metadata from disk"""
         try:
-            # Load the FAISS index
-            if os.path.exists(f"{path}.index"):
-                self.index = faiss.read_index(f"{path}.index")
-            else:
-                return False
-
-            # Load the elements and metadata
+            # Load the data
             if os.path.exists(f"{path}.data"):
                 with open(f"{path}.data", "rb") as f:
                     data = pickle.load(f)
 
                 self.elements = data.get("elements", [])
+                self.embeddings = data.get("embeddings", [])
                 self.metadata = data.get("metadata", {})
                 self.dimension = data.get("dimension", self.dimension)
 

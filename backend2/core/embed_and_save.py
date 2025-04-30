@@ -9,7 +9,6 @@ DATA_PATH = "processed_data/training/llm_training_data.json"
 OUT_PATH = "processed_data/training/ui_embeddings.json"
 os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
 
-# Load SentenceTransformer model
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # Load your LLM training data

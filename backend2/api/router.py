@@ -8,11 +8,10 @@ from typing import Dict, Any, Optional
 from pydantic import BaseModel
 import os
 import sys
+from core.fusion_classifier import HybridNavigator
 
-# Add the project root to the path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# Import components and config
 
 # Initialize components (only once)
 vector_store = VectorStore(dimension=Config.VECTOR_DIMENSION)
@@ -24,11 +23,19 @@ llm = MistralHFConnector(
 )
 # In api/router.py:
 # Initialize navigator with RL model
-navigator = UINavigator(
+# navigator = UINavigator(
+#     vector_store=vector_store,
+#     embedder=embedder,
+#     llm=llm,
+#     rl_model_path="model/rl_model.pt"  # Add this
+# )
+navigator = HybridNavigator(
     vector_store=vector_store,
     embedder=embedder,
     llm=llm,
-    rl_model_path="model/rl_model.pt"  # Add this
+    bert_model_path="model/llm_bert_model.pt",
+    rl_model_path="model/rl_model.pt",
+    element_dim=33
 )
 
 router = APIRouter()

@@ -89,7 +89,7 @@ class LLMQueryElementDataset(Dataset):
             vec[-1] = 1.0  # Mark as unknown
         return vec
 
-    def enhanced_element_features(elem, screen_width=1440, screen_height=2560):
+    def enhanced_element_features(self, elem, screen_width=1440, screen_height=2560):
         """
         Extract richer features from UI elements
 

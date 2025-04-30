@@ -551,6 +551,7 @@ const NavigationAssistant = () => {
               )}
 
               {/* Results */}
+              {/* Results */}
               {result && (
                 <div className="mt-3">
                   {result.success ? (
@@ -574,6 +575,20 @@ const NavigationAssistant = () => {
                                   {Math.round(action.confidence * 100)}% match
                                 </span>
                               </div>
+                              {action.bert_confidence &&
+                                action.rag_confidence && (
+                                  <div className="flex space-x-4 text-xs text-gray-500 mt-1">
+                                    <span>
+                                      BERT:{" "}
+                                      {Math.round(action.bert_confidence * 100)}
+                                      %
+                                    </span>
+                                    <span>
+                                      RAG:{" "}
+                                      {Math.round(action.rag_confidence * 100)}%
+                                    </span>
+                                  </div>
+                                )}
                               {action.reasoning && (
                                 <p className="text-xs text-gray-500 mt-1">
                                   {action.reasoning}

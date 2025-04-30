@@ -87,7 +87,7 @@ def train():
 
     os.makedirs("model", exist_ok=True)
     torch.save(model.state_dict(), SAVE_PATH)
-    print(f"✅ RL model saved to {SAVE_PATH}")
+    print(f"RL model saved to {SAVE_PATH}")
 
 # === Navigation with RL Integration ===
 
