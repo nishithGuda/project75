@@ -67,7 +67,6 @@ const NavigationAssistant = () => {
       captureScreenshot();
     }
   }, [isOpen]);
-
   const captureScreenshot = async () => {
     try {
       // First hide the assistant to avoid it appearing in the screenshot
@@ -393,7 +392,6 @@ const NavigationAssistant = () => {
           // Default to click for buttons and other elements
           element.click();
         }
-
         // Reset background after interaction
         setTimeout(() => {
           element.style.backgroundColor = originalBg;
@@ -542,14 +540,12 @@ const NavigationAssistant = () => {
                   </ul>
                 </div>
               )}
-
               {/* Processing Indicator */}
               {isProcessing && (
                 <div className="mt-3 flex justify-center">
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
                 </div>
               )}
-
               {/* Results */}
               {/* Results */}
               {result && (
@@ -612,7 +608,6 @@ const NavigationAssistant = () => {
                   )}
                 </div>
               )}
-
               {/* Error Message */}
               {error && (
                 <div className="mt-3 text-red-600 bg-red-50 p-2 rounded-md">
