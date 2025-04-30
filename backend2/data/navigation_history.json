@@ -1,7 +1,7 @@
 {
   "accounts_screen_card-1": {
-    "interactions": 1,
-    "successes": 1,
+    "interactions": 2,
+    "successes": 2,
     "queries": []
   },
   "accounts_screen_nav-transactions": {
@@ -45,8 +45,8 @@
     "queries": []
   },
   "accounts_screen_nav-accounts": {
-    "interactions": 6,
-    "successes": 6,
+    "interactions": 7,
+    "successes": 7,
     "queries": []
   },
   "accounts_screen_card-3": {
@@ -55,8 +55,8 @@
     "queries": []
   },
   "accounts_screen_btn-submit-transfer": {
-    "interactions": 3,
-    "successes": 3,
+    "interactions": 5,
+    "successes": 5,
     "queries": []
   },
   "accounts_screen_transfer-form-container": {
@@ -65,13 +65,28 @@
     "queries": []
   },
   "accounts_screen_card-4": {
+    "interactions": 5,
+    "successes": 5,
+    "queries": []
+  },
+  "accounts_screen_btn-view-3": {
+    "interactions": 5,
+    "successes": 5,
+    "queries": []
+  },
+  "transactions_screen_nav-accounts": {
     "interactions": 1,
     "successes": 1,
     "queries": []
   },
-  "accounts_screen_btn-view-3": {
-    "interactions": 2,
-    "successes": 2,
+  "accounts_screen_btn-view-4": {
+    "interactions": 1,
+    "successes": 1,
+    "queries": []
+  },
+  "transfer_screen_nav-accounts": {
+    "interactions": 1,
+    "successes": 1,
     "queries": []
   }
 }
