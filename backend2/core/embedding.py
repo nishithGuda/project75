@@ -1,7 +1,8 @@
 # backend2/core/embedding.py
 import numpy as np
+import re
 from sentence_transformers import SentenceTransformer
-from typing import List, Dict
+from typing import List, Dict, Tuple, Optional
 
 
 class ElementEmbedder:
@@ -10,6 +11,33 @@ class ElementEmbedder:
     def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
         self.model = SentenceTransformer(model_name)
         self.feature_extractor = UIFeatureExtractor()
+
+        # Action type prediction components
+        self.action_types = {
+            "click": "Click or tap on an element",
+            "input": "Type, enter or fill in text in a field",
+            "select": "Choose an option from a dropdown or list",
+            "view": "View or display information",
+            "transfer": "Transfer money or funds between accounts",
+            "search": "Search for something specific",
+            "filter": "Filter or sort information",
+            "navigate": "Navigate to a different page or section"
+        }
+
+        # Patterns for action type detection
+        self.action_patterns = [
+            (r'\b(click|tap|press|select|choose)\b', 'click'),
+            (r'\b(type|enter|input|fill|write)\b', 'input'),
+            (r'\b(scroll|swipe)\b', 'scroll'),
+            (r'\b(view|show|display|see|look at)\b', 'view'),
+            (r'\b(transfer|send|move)\s+(money|funds|balance|cash)\b', 'transfer'),
+            (r'\b(search|find|look for)\b', 'search'),
+            (r'\b(filter|sort)\b', 'filter'),
+            (r'\b(navigate|go to|open|visit)\b', 'navigate'),
+        ]
+
+        # Create action type embeddings
+        self.action_embeddings = self._create_action_embeddings()
 
     def encode_elements(self, elements: List[Dict]) -> np.ndarray:
         """Create embeddings for UI elements with feature fusion"""
@@ -28,6 +56,134 @@ class ElementEmbedder:
 
     def encode_query(self, query: str) -> np.ndarray:
         return self.model.encode(query)
+
+    def extract_action_from_query(self, query: str) -> str:
+        """Extract action type from query using regex patterns"""
+        query_lower = query.lower()
+
+        # Try pattern matching first
+        for pattern, action in self.action_patterns:
+            if re.search(pattern, query_lower):
+                return action
+
+        # Default to click if no pattern matches
+        return "click"
+
+    def extract_input_value(self, query: str) -> Optional[str]:
+        """Extract input value from query for input actions"""
+        # Only extract value for input actions
+        if not re.search(r'\b(type|enter|input|fill|write)\b', query.lower()):
+            return None
+
+        # Patterns to extract quoted text or text after specific phrases
+        patterns = [
+            # Match quoted text
+            r'(?:type|enter|input|fill|write)\s+[\'"]([^\'"]+)[\'"]',
+            # Match unquoted text
+            r'(?:type|enter|input|fill|write)\s+(?:the\s+)?(?:text|value|words?)?\s*:?\s*([a-zA-Z0-9\s]+)',
+        ]
+
+        for pattern in patterns:
+            match = re.search(pattern, query.lower())
+            if match:
+                return match.group(1).strip()
+
+        return None
+
+    def predict_action_type(self, query: str, element: Optional[Dict] = None) -> Tuple[str, float]:
+        """Predict the most likely action type for a query and element"""
+        # 1. Try regex pattern matching first (high precision)
+        query_lower = query.lower()
+        for pattern, action in self.action_patterns:
+            if re.search(pattern, query_lower):
+                return action, 0.9  # High confidence for regex matches
+
+        # 2. Use embedding similarity if regex doesn't match
+        query_embedding = self.encode_query(query)
+
+        # Calculate similarity with each action type
+        similarities = {}
+        for action, embedding in self.action_embeddings.items():
+            # Cosine similarity
+            similarity = np.dot(query_embedding, embedding) / (
+                np.linalg.norm(query_embedding) * np.linalg.norm(embedding)
+            )
+            similarities[action] = similarity
+
+        # 3. Consider element type if available
+        if element is not None:
+            element_type = element.get("type", "").lower()
+
+            # Boost certain action types based on element type
+            if element_type in ["input", "textarea"]:
+                similarities["input"] = max(similarities["input"], 0.7)
+            elif element_type in ["select", "dropdown"]:
+                similarities["select"] = max(similarities["select"], 0.7)
+            elif element_type == "button":
+                similarities["click"] = max(similarities["click"], 0.7)
+
+        # Get action with highest similarity
+        best_action = max(similarities, key=similarities.get)
+        confidence = similarities[best_action]
+
+        # Default to click if confidence is too low
+        if confidence < 0.4:
+            return "click", 0.5
+
+        return best_action, confidence
+
+    def predict_actions_for_elements(self, query: str, elements: List[Dict]) -> List[Dict]:
+        """Predict action types for multiple elements with the same query"""
+        # Extract base action from query
+        default_action = self.extract_action_from_query(query)
+        input_value = self.extract_input_value(
+            query) if default_action == "input" else None
+
+        # Process each element
+        updated_elements = []
+        for elem in elements:
+            elem_copy = elem.copy()
+
+            # Get element-specific prediction
+            action, confidence = self.predict_action_type(query, elem)
+
+            # Add action information to the element
+            elem_copy["action_type"] = action
+            elem_copy["action_confidence"] = confidence
+
+            # Add action parameters for input actions if needed
+            if action == "input" and input_value:
+                elem_copy["action_parameters"] = {"value": input_value}
+
+            updated_elements.append(elem_copy)
+
+        return updated_elements
+
+    def _create_action_embeddings(self) -> Dict[str, np.ndarray]:
+        """Create embeddings for each action type"""
+        embeddings = {}
+
+        # Create rich descriptions for each action type
+        action_descriptions = {}
+        for action, desc in self.action_types.items():
+            # Create multiple descriptions for each action
+            descriptions = [
+                desc,
+                f"I want to {action}",
+                f"The user wants to {action}",
+                f"{action} something"
+            ]
+            action_descriptions[action] = descriptions
+
+        # Create embeddings for all descriptions
+        for action, descriptions in action_descriptions.items():
+            # Get embeddings for each description
+            desc_embeddings = self.model.encode(descriptions)
+
+            # Average the embeddings for each action type
+            embeddings[action] = np.mean(desc_embeddings, axis=0)
+
+        return embeddings
 
     def _format_element_text(self, elem: Dict) -> str:
         """Format element properties into descriptive text"""

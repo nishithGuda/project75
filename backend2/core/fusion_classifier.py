@@ -1,5 +1,6 @@
 # backend2/core/fusion_classifier.py
-from typing import Dict, List
+import time
+from typing import Any, Dict, List
 import torch
 import numpy as np
 from .navigator import UINavigator
@@ -36,6 +37,73 @@ class HybridNavigator(UINavigator):
         print(f"BERT model loaded from {bert_model_path}")
         print(f"Complete hybrid system initialized with BERT, RAG and RL components")
 
+    def process_query(self, query: str, screen_metadata: Dict[str, Any]) -> Dict[str, Any]:
+        """Override process_query to include BERT analysis"""
+        start_time = time.time()
+        self.metrics["total_queries"] += 1
+
+        try:
+            # Extract elements from metadata
+            elements = screen_metadata.get("elements", [])
+            if not elements:
+                return {
+                    "success": False,
+                    "error": "No UI elements found in screen metadata",
+                    "actions": []
+                }
+
+            # 1. Vector-based retrieval
+            vector_candidates = self._retrieve_similar_elements(
+                query, elements)
+
+            if not vector_candidates:
+                return {
+                    "success": False,
+                    "error": "No relevant elements found for this query",
+                    "actions": []
+                }
+
+            # 2. Add action type prediction using embedder
+            candidates_with_actions = self._add_action_prediction(
+                query, vector_candidates)
+
+            # 3. LLM-based analysis
+            candidates_with_llm = self._analyze_with_llm(
+                query, candidates_with_actions, screen_metadata)
+
+            # 4. Calculate final confidence scores with BERT
+            actions = self._calculate_confidence_scores(
+                candidates_with_llm, query, screen_metadata)
+
+            # 5. Update performance metrics
+            processing_time = time.time() - start_time
+            self._update_metrics(processing_time)
+
+            # Extract base action for the query
+            base_action = self._extract_base_action_type(query)
+
+            return {
+                "success": True,
+                "actions": actions,
+                "query": query,
+                "detected_action": base_action,
+                "processing_time": round(processing_time, 3),
+                "vector_candidates": len(vector_candidates),
+                "total_elements": len(elements)
+            }
+
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+
+            processing_time = time.time() - start_time
+            return {
+                "success": False,
+                "error": f"Error processing query: {str(e)}",
+                "actions": [],
+                "processing_time": round(processing_time, 3)
+            }
+
     def _calculate_confidence_scores(self, elements: List[Dict],
                                      query: str, screen_metadata: Dict) -> List[Dict]:
         """Calculate final confidence scores using BERT, RAG and RL"""
@@ -49,6 +117,7 @@ class HybridNavigator(UINavigator):
             # Get scores from different sources
             vector_score = elem.get("vector_score", 0.5)
             llm_score = elem.get("llm_confidence", 0.5)
+            action_confidence = elem.get("action_confidence", 0.7)
 
             # Get element ID
             element_id = elem.get("id", "unknown")
@@ -69,16 +138,18 @@ class HybridNavigator(UINavigator):
                     history_score = (successes + 1) / (interactions + 2)
 
             # Apply weighting to combine scores
-            # Distribute weights among all three components
-            llm_weight = 0.35
-            vector_weight = 0.15
-            bert_weight = 0.35
+            # Distribute weights among all components
+            llm_weight = 0.30
+            vector_weight = 0.10
+            bert_weight = 0.30
+            action_weight = 0.15
             history_weight = 0.15
 
             combined_score = (
                 llm_weight * llm_score +
                 vector_weight * vector_score +
                 bert_weight * bert_score +
+                action_weight * action_confidence +
                 history_weight * history_score
             )
 
@@ -86,22 +157,29 @@ class HybridNavigator(UINavigator):
             if self.rl_model is not None:
                 try:
                     with torch.no_grad():
-                        # Create feature vector with all scores
-                        features = torch.tensor([[
-                            combined_score,
-                            llm_score,
-                            vector_score,
-                            bert_score,
-                            history_score
-                        ]], dtype=torch.float).to(self.device)
+                        # Get model device
+                        model_device = next(self.rl_model.parameters()).device
+
+                        # For the existing model architecture, we only use the combined score
+                        features = torch.tensor(
+                            [[combined_score]], dtype=torch.float).to(model_device)
 
                         # Get RL adjustment
-                        adjustment = self.rl_model(features).cpu().item()
+                        adjustment = self.rl_model(features)
+
+                        # Move result to CPU before calling item()
+                        adjustment_value = adjustment.cpu().item()
 
                         # Blend original score with RL adjustment (70/30 blend)
-                        combined_score = 0.7 * combined_score + 0.3 * adjustment
+                        combined_score = 0.7 * combined_score + 0.3 * adjustment_value
                 except Exception as e:
                     print(f"Error applying RL model: {e}")
+
+            # Get action type from element or default to click
+            action_type = elem.get("action_type", "click")
+
+            # Get action parameters if available
+            action_params = elem.get("action_parameters", None)
 
             # Create action object
             action = {
@@ -109,13 +187,20 @@ class HybridNavigator(UINavigator):
                 "type": elem.get("type", "unknown"),
                 "text": elem.get("text", ""),
                 "confidence": round(float(combined_score), 4),
+                "action_type": action_type,
                 "reasoning": elem.get("reasoning", ""),
                 # Include individual scores for transparency
                 "llm_score": round(float(llm_score), 4),
                 "vector_score": round(float(vector_score), 4),
                 "bert_score": round(float(bert_score), 4),
+                "action_confidence": round(float(action_confidence), 4),
                 "history_score": round(float(history_score), 4)
             }
+
+            # Add action parameters if available
+            if action_params:
+                action["action_parameters"] = action_params
+
             actions.append(action)
 
         # Sort by confidence

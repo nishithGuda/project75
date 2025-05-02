@@ -49,7 +49,8 @@ class MistralHFConnector:
             Given a user's natural language query and UI element details:
             1. Analyze the semantic match between the query intent and each element's properties
             2. Consider element type, text content, position, and functionality
-            3. Rank elements by relevance, providing a confidence score (0-1) and brief reasoning
+            3. Identify the action the user wants to perform (click, input, select, view, etc.)
+            4. Rank elements by relevance, providing a confidence score (0-1) and brief reasoning
 
             Use a step-by-step approach to evaluate each element and determine the best match."""
         }
@@ -93,11 +94,13 @@ class MistralHFConnector:
         # Add instructions for the response format
         user_content += """Analyze each element's relevance to the query.
         Respond with a JSON object containing:
-        1. "rankings": An array of objects with:
+        1. "detected_action": The primary action the user wants to perform (click, input, select, view, etc.)
+        2. "rankings": An array of objects with:
            - "element_index": Index of the element (starting from 0)
            - "element_id": ID of the element
            - "confidence": A score between 0-1 indicating relevance
            - "reasoning": Brief explanation of why this element matches or doesn't match
+           - "action_type": The specific action to perform on this element (click, input, select, view, etc.)
 
         Format your response as valid JSON only, with no other text."""
 
@@ -128,6 +131,9 @@ class MistralHFConnector:
             # Extract JSON from the response
             json_data = self._extract_json(content)
 
+            # Extract detected action
+            detected_action = json_data.get("detected_action", "click")
+
             # Process the rankings
             if "rankings" in json_data:
                 processed_elements = []
@@ -143,6 +149,10 @@ class MistralHFConnector:
                         element["reasoning"] = rank.get("reasoning", "")
                         element["element_id"] = rank.get(
                             "element_id", element.get("id", ""))
+
+                        # Add action type information
+                        element["action_type"] = rank.get(
+                            "action_type", detected_action)
 
                         processed_elements.append(element)
 
@@ -227,11 +237,26 @@ class UINavigator:
         if os.path.exists(rl_model_path):
             try:
                 self.rl_model = SimpleRLModel()
-                self.rl_model.load_state_dict(torch.load(rl_model_path))
+
+                # Get device information
+                self.device = torch.device(
+                    "cuda" if torch.cuda.is_available() else "cpu")
+
+                # Load with appropriate device mapping
+                self.rl_model.load_state_dict(torch.load(
+                    rl_model_path, map_location=self.device))
+
+                # Move model to device
+                self.rl_model = self.rl_model.to(self.device)
                 self.rl_model.eval()
-                print(f"Loaded RL model from {rl_model_path}")
+
+                print(f"Loaded RL model from {rl_model_path} to {self.device}")
             except Exception as e:
                 print(f"Error loading RL model: {e}")
+                self.rl_model = None
+        else:
+            self.device = torch.device(
+                "cuda" if torch.cuda.is_available() else "cpu")
 
         # Performance metrics
         self.metrics = {
@@ -271,22 +296,30 @@ class UINavigator:
                     "actions": []
                 }
 
-            # 2. LLM-based analysis
-            ranked_elements = self._analyze_with_llm(
-                query, vector_candidates, screen_metadata)
+            # 2. Add action type prediction using embedder
+            candidates_with_actions = self._add_action_prediction(
+                query, vector_candidates)
 
-            # 3. Calculate final confidence scores
+            # 3. LLM-based analysis
+            ranked_elements = self._analyze_with_llm(
+                query, candidates_with_actions, screen_metadata)
+
+            # 4. Calculate final confidence scores
             actions = self._calculate_confidence_scores(
                 ranked_elements, query, screen_metadata)
 
-            # 4. Update performance metrics
+            # 5. Update performance metrics
             processing_time = time.time() - start_time
             self._update_metrics(processing_time)
+
+            # Extract base action for the query
+            base_action = self._extract_base_action_type(query)
 
             return {
                 "success": True,
                 "actions": actions,
                 "query": query,
+                "detected_action": base_action,
                 "processing_time": round(processing_time, 3),
                 "vector_candidates": len(vector_candidates),
                 "total_elements": len(elements)
@@ -304,7 +337,7 @@ class UINavigator:
                 "processing_time": round(processing_time, 3)
             }
 
-    def record_feedback(self, element_id: str, screen_id: str, success: bool) -> bool:
+    def record_feedback(self, element_id: str, screen_id: str, success: bool, action_type: Optional[str] = None) -> bool:
         """Record user feedback for reinforcement learning"""
         try:
             # Create a history key
@@ -315,6 +348,7 @@ class UINavigator:
                 self.history[key] = {
                     "interactions": 0,
                     "successes": 0,
+                    "actions": {},
                     "queries": [],
                 }
 
@@ -322,6 +356,21 @@ class UINavigator:
             self.history[key]["interactions"] += 1
             if success:
                 self.history[key]["successes"] += 1
+
+            # Update action statistics if provided
+            if action_type:
+                if "actions" not in self.history[key]:
+                    self.history[key]["actions"] = {}
+
+                if action_type not in self.history[key]["actions"]:
+                    self.history[key]["actions"][action_type] = {
+                        "count": 0,
+                        "success_count": 0
+                    }
+
+                self.history[key]["actions"][action_type]["count"] += 1
+                if success:
+                    self.history[key]["actions"][action_type]["success_count"] += 1
 
             # Update vector store for future retrievals
             self.vector_store.update_feedback(element_id, success)
@@ -339,6 +388,119 @@ class UINavigator:
     def get_metrics(self) -> Dict[str, Any]:
         """Get current performance metrics"""
         return self.metrics
+
+    def _add_action_prediction(self, query: str, elements: List[Dict]) -> List[Dict]:
+        """Add action type predictions to elements"""
+        try:
+            # Check if embedder has action prediction methods
+            if hasattr(self.embedder, 'predict_actions_for_elements'):
+                return self.embedder.predict_actions_for_elements(query, elements)
+            elif hasattr(self.embedder, 'extract_action_from_query'):
+                # Fall back to simple prediction
+                action_type = self.embedder.extract_action_from_query(query)
+                input_value = None
+
+                # Try to extract input value if it's an input action
+                if action_type == "input" and hasattr(self.embedder, 'extract_input_value'):
+                    input_value = self.embedder.extract_input_value(query)
+
+                # Add action type to all elements
+                for elem in elements:
+                    elem["action_type"] = action_type
+                    elem["action_confidence"] = 0.8
+
+                    # Add input value if available
+                    if action_type == "input" and input_value:
+                        elem["action_parameters"] = {"value": input_value}
+
+                return elements
+            else:
+                # Fallback if embedder doesn't have action prediction
+                return self._extract_action_manually(query, elements)
+        except Exception as e:
+            print(f"Error predicting actions: {e}")
+            return elements
+
+    def _extract_base_action_type(self, query: str) -> str:
+        """Extract the base action type from a query"""
+        try:
+            # Use embedder if it has the method
+            if hasattr(self.embedder, 'extract_action_from_query'):
+                return self.embedder.extract_action_from_query(query)
+            else:
+                # Manual extraction
+                import re
+                query_lower = query.lower()
+
+                # Define action patterns
+                action_patterns = [
+                    (r'\b(click|tap|press|select|choose)\b', 'click'),
+                    (r'\b(type|enter|input|fill|write)\b', 'input'),
+                    (r'\b(scroll|swipe)\b', 'scroll'),
+                    (r'\b(view|show|display|see|look at)\b', 'view'),
+                    (r'\b(transfer|send|move)\s+(money|funds|balance|cash)\b', 'transfer'),
+                    (r'\b(search|find|look for)\b', 'search'),
+                    (r'\b(filter|sort)\b', 'filter'),
+                    (r'\b(navigate|go to|open|visit)\b', 'navigate'),
+                ]
+
+                # Check each pattern
+                for pattern, action in action_patterns:
+                    if re.search(pattern, query_lower):
+                        return action
+
+                # Default to click
+                return "click"
+        except Exception as e:
+            print(f"Error extracting action type: {e}")
+            return "click"
+
+    def _extract_action_manually(self, query: str, elements: List[Dict]) -> List[Dict]:
+        """Manual fallback for action type extraction"""
+        action_type = self._extract_base_action_type(query)
+
+        # Extract input value if relevant
+        input_value = None
+        if action_type == "input":
+            import re
+            query_lower = query.lower()
+
+            # Patterns to extract quoted text or text after specific phrases
+            patterns = [
+                # Match quoted text
+                r'(?:type|enter|input|fill|write)\s+[\'"]([^\'"]+)[\'"]',
+                # Match unquoted text
+                r'(?:type|enter|input|fill|write)\s+(?:the\s+)?(?:text|value|words?)?\s*:?\s*([a-zA-Z0-9\s]+)',
+            ]
+
+            for pattern in patterns:
+                match = re.search(pattern, query_lower)
+                if match:
+                    input_value = match.group(1).strip()
+                    break
+
+        # Add action type to all elements
+        updated_elements = []
+        for elem in elements:
+            elem_copy = elem.copy()
+            elem_copy["action_type"] = action_type
+            elem_copy["action_confidence"] = 0.7
+
+            # Special handling for input elements
+            if action_type == "input" and input_value:
+                elem_copy["action_parameters"] = {"value": input_value}
+
+                # Boost confidence for actual input elements
+                if elem_copy.get("type", "").lower() in ["input", "textarea"]:
+                    elem_copy["action_confidence"] = 0.9
+
+            # Special handling for select elements
+            elif action_type == "select" and elem_copy.get("type", "").lower() in ["select", "dropdown"]:
+                elem_copy["action_confidence"] = 0.9
+
+            updated_elements.append(elem_copy)
+
+        return updated_elements
 
     def _retrieve_similar_elements(self, query: str, elements: List[Dict]) -> List[Dict]:
         """Retrieve relevant elements using vector similarity"""
@@ -382,6 +544,7 @@ class UINavigator:
             # Get scores from different sources
             vector_score = elem.get("vector_score", 0.5)
             llm_score = elem.get("llm_confidence", 0.5)
+            action_confidence = elem.get("action_confidence", 0.7)
 
             # Get historical success rate if available
             element_id = elem.get("id", "unknown")
@@ -398,13 +561,15 @@ class UINavigator:
                     history_score = (successes + 1) / (interactions + 2)
 
             # Apply weighting to combine scores
-            llm_weight = 0.6
-            vector_weight = 0.3
+            llm_weight = 0.5
+            vector_weight = 0.25
+            action_weight = 0.15
             history_weight = 0.1
 
             combined_score = (
                 llm_weight * llm_score +
                 vector_weight * vector_score +
+                action_weight * action_confidence +
                 history_weight * history_score
             )
 
@@ -412,15 +577,29 @@ class UINavigator:
             if self.rl_model is not None:
                 try:
                     with torch.no_grad():
-                        # Convert confidence to tensor
-                        confidence_tensor = torch.tensor(
-                            [[combined_score]], dtype=torch.float)
+                        # Get model device
+                        model_device = next(self.rl_model.parameters()).device
+
+                        # Create feature tensor on the correct device
+                        features = torch.tensor(
+                            [[combined_score]], dtype=torch.float).to(model_device)
+
                         # Get RL adjustment
-                        adjustment = self.rl_model(confidence_tensor).item()
+                        adjustment = self.rl_model(features)
+
+                        # Move result to CPU for item() call
+                        adjustment_value = adjustment.cpu().item()
+
                         # Blend original score with RL adjustment (70/30 blend)
-                        combined_score = 0.7 * combined_score + 0.3 * adjustment
+                        combined_score = 0.7 * combined_score + 0.3 * adjustment_value
                 except Exception as e:
                     print(f"Error applying RL model: {e}")
+
+            # Get action type from element or default to click
+            action_type = elem.get("action_type", "click")
+
+            # Get action parameters if available
+            action_params = elem.get("action_parameters", None)
 
             # Create action object
             action = {
@@ -428,8 +607,14 @@ class UINavigator:
                 "type": elem.get("type", "unknown"),
                 "text": elem.get("text", ""),
                 "confidence": round(float(combined_score), 4),
+                "action_type": action_type,
                 "reasoning": elem.get("reasoning", "")
             }
+
+            # Add action parameters if available
+            if action_params:
+                action["action_parameters"] = action_params
+
             actions.append(action)
 
         # Sort by confidence

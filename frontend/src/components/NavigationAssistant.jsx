@@ -302,113 +302,186 @@ const NavigationAssistant = () => {
   const executeAction = (action, screenId) => {
     console.log("Executing action:", action);
 
-    // Special handling for navigation intent - check both text and ID
-    const lowerText = (action.text || "").toLowerCase();
-    const actionId = action.id || "";
+    // Get action type from the backend response, or default to "click"
+    const actionType = action.action_type || "click";
 
-    // Handle navigation actions based on ID or text content
-    if (action.type === "navigation" || actionId.startsWith("nav-")) {
-      // Navigation handling based on text matches
-      if (
-        lowerText.includes("transaction") ||
-        actionId.includes("transaction")
-      ) {
-        navigate("/transactions");
-        return;
-      } else if (
-        lowerText.includes("account") ||
-        actionId.includes("account") ||
-        lowerText.includes("home") ||
-        actionId.includes("home")
-      ) {
-        navigate("/");
-        return;
-      } else if (
-        lowerText.includes("transfer") ||
-        actionId.includes("transfer")
-      ) {
+    // Handle based on action type
+    switch (actionType) {
+      case "input":
+        handleInputAction(action);
+        break;
+
+      case "select":
+        handleSelectAction(action);
+        break;
+
+      case "view":
+        handleViewAction(action);
+        break;
+
+      case "transfer":
         navigate("/transfer");
-        return;
-      }
-    }
+        break;
 
-    // Direct command handling - check query intent
-    const queryLower = query.toLowerCase();
-    if (
-      queryLower.includes("view transaction") ||
-      queryLower.includes("see transaction") ||
-      queryLower.includes("show transaction") ||
-      queryLower.includes("go to transaction")
-    ) {
-      navigate("/transactions");
-      return;
-    } else if (
-      queryLower.includes("transfer") ||
-      queryLower.includes("send money")
-    ) {
-      navigate("/transfer");
-      return;
-    } else if (
-      queryLower.includes("account") ||
-      queryLower.includes("overview") ||
-      queryLower.includes("dashboard") ||
-      queryLower.includes("home")
-    ) {
-      navigate("/");
-      return;
-    }
+      case "navigate":
+        handleNavigationAction(action);
+        break;
 
-    // For element actions, find and interact with the element
+      case "filter":
+        handleFilterAction(action);
+        break;
+
+      case "click":
+      default:
+        handleClickAction(action);
+        break;
+    }
+  };
+
+  // Handle input actions (for text fields)
+  const handleInputAction = (action) => {
     const element = document.querySelector(`[data-id="${action.id}"]`);
-    if (element) {
-      // Highlight the element before interacting
-      const originalBg = element.style.backgroundColor;
-      element.style.backgroundColor = "rgba(59, 130, 246, 0.3)";
-      element.style.transition = "background-color 0.3s";
+    if (!element) return;
 
-      // Scroll element into view if needed
+    // Only process if it's an input element
+    if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+      // Get the value to input (if provided)
+      const value = action.action_parameters?.value || "";
+
+      // Highlight the element
+      highlightElement(element);
+
+      // Scroll into view
       element.scrollIntoView({ behavior: "smooth", block: "center" });
 
-      // Simulate interaction after a short delay
+      // Focus and set value
       setTimeout(() => {
-        // Different interaction based on element type
-        if (action.interaction === "input" && element.tagName === "INPUT") {
-          // Focus and set value for input fields
-          element.focus();
-          element.value = action.value || "";
-          // Trigger input event to notify React of the change
-          const event = new Event("input", { bubbles: true });
-          element.dispatchEvent(event);
-        } else if (
-          action.interaction === "select" &&
-          element.tagName === "SELECT"
-        ) {
-          // Handle dropdown selection
-          element.value = action.value || "";
-          // Trigger change event
-          const event = new Event("change", { bubbles: true });
-          element.dispatchEvent(event);
-        } else {
-          // Default to click for buttons and other elements
-          element.click();
-        }
-        // Reset background after interaction
-        setTimeout(() => {
-          element.style.backgroundColor = originalBg;
-        }, 300);
+        element.focus();
+        element.value = value;
+
+        // Trigger input event
+        const event = new Event("input", { bubbles: true });
+        element.dispatchEvent(event);
       }, 500);
     } else {
-      console.log("Element not found:", action.id);
+      // Fallback to click if not an input element
+      handleClickAction(action);
+    }
+  };
 
-      // Fallback navigation if element is not found but has navigation text
-      if (lowerText.includes("transaction")) {
-        navigate("/transactions");
-      } else if (lowerText.includes("transfer")) {
-        navigate("/transfer");
-      } else if (lowerText.includes("account") || lowerText.includes("home")) {
-        navigate("/");
+  // Handle select actions (for dropdowns)
+  const handleSelectAction = (action) => {
+    const element = document.querySelector(`[data-id="${action.id}"]`);
+    if (!element || element.tagName !== "SELECT") {
+      handleClickAction(action);
+      return;
+    }
+
+    // Get the value to select (if provided)
+    const value = action.action_parameters?.value || "";
+
+    // Highlight the element
+    highlightElement(element);
+
+    // Scroll into view
+    element.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    // Set value and trigger change event
+    setTimeout(() => {
+      element.value = value;
+      const event = new Event("change", { bubbles: true });
+      element.dispatchEvent(event);
+    }, 500);
+  };
+
+  // Handle view actions
+  const handleViewAction = (action) => {
+    const text = (action.text || "").toLowerCase();
+
+    // Check if it's a view transactions request
+    if (text.includes("transaction")) {
+      navigate("/transactions");
+      return;
+    }
+
+    // Check if it's a view account statement
+    if (action.id?.startsWith("btn-view-")) {
+      const element = document.querySelector(`[data-id="${action.id}"]`);
+      if (element) {
+        highlightAndClick(element);
+      }
+      return;
+    }
+
+    // Default to regular click as fallback
+    handleClickAction(action);
+  };
+
+  // Handle navigation actions
+  const handleNavigationAction = (action) => {
+    const text = (action.text || "").toLowerCase();
+
+    if (text.includes("transaction") || action.id?.includes("transaction")) {
+      navigate("/transactions");
+    } else if (text.includes("transfer") || action.id?.includes("transfer")) {
+      navigate("/transfer");
+    } else if (
+      text.includes("account") ||
+      action.id?.includes("account") ||
+      text.includes("home") ||
+      action.id?.includes("home")
+    ) {
+      navigate("/");
+    } else {
+      // Try clicking the element as fallback
+      const element = document.querySelector(`[data-id="${action.id}"]`);
+      if (element) {
+        highlightAndClick(element);
       }
     }
+  };
+
+  // Handle filter actions
+  const handleFilterAction = (action) => {
+    const element = document.querySelector(`[data-id="${action.id}"]`);
+    if (!element) return;
+
+    // Handle different filter elements
+    if (element.tagName === "SELECT") {
+      handleSelectAction(action);
+    } else if (action.id.includes("dropdown") || action.id.includes("filter")) {
+      highlightAndClick(element);
+    } else {
+      handleClickAction(action);
+    }
+  };
+
+  // Handle click actions
+  const handleClickAction = (action) => {
+    const element = document.querySelector(`[data-id="${action.id}"]`);
+    if (!element) {
+      // Try navigation based on text as fallback
+      handleNavigationAction(action);
+      return;
+    }
+
+    // Click the element
+    highlightAndClick(element);
+  };
+
+  // Helper to highlight and click an element
+  const highlightAndClick = (element) => {
+    highlightElement(element);
+    element.scrollIntoView({ behavior: "smooth", block: "center" });
+    setTimeout(() => element.click(), 500);
+  };
+
+  // Helper to highlight an element
+  const highlightElement = (element) => {
+    const originalBg = element.style.backgroundColor;
+    element.style.backgroundColor = "rgba(59, 130, 246, 0.3)";
+    element.style.transition = "background-color 0.3s";
+    setTimeout(() => (element.style.backgroundColor = originalBg), 800);
   };
 
   return (

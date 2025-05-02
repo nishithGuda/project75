@@ -6,7 +6,7 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from tqdm import tqdm
 
-# RL Model Definition
+# RL Model Definition matching your existing saved model architecture
 
 
 class SimpleRLModel(nn.Module):
@@ -15,7 +15,10 @@ class SimpleRLModel(nn.Module):
         self.net = nn.Sequential(
             nn.Linear(input_dim, 16),
             nn.ReLU(),
-            nn.Linear(16, 1)
+            nn.Linear(16, 8),  # This matches your saved model's [8, 16] shape
+            nn.ReLU(),         # Activation between the layers
+            # Final layer matching "net.4.weight" in your saved model
+            nn.Linear(8, 1)
         )
 
     def forward(self, x):
@@ -90,3 +93,8 @@ def train_rl_model(data_path="processed_data/training/rl_training_data.json",
     print(f"✅ RL model saved to {save_path}")
 
     return model
+
+
+if __name__ == "__main__":
+    print("Starting RL model training...")
+    train_rl_model()

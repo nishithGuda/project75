@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 // Existing navigationClient.js with updates for new backend
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d
 const API_BASE_URL = 'http://localhost:8000';
 
 /**
@@ -27,11 +24,7 @@ export const processQueryWithVisual = async (query, screenshot, screenMetadata) 
     console.log('Sending query to LLM backend:', query);
     
     // Send request to the LLM backend
-<<<<<<< HEAD
-    const response = await fetch(`${API_BASE_URL}/api/process-query-visual`, {
-=======
     const response = await fetch(`${API_BASE_URL}/process-query-visual`, {
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -60,53 +53,6 @@ export const processQueryWithVisual = async (query, screenshot, screenMetadata) 
 };
 
 /**
-<<<<<<< HEAD
- * Execute a selected UI action
- * @param {string} actionId - ID of the action to execute
- * @param {string} screenId - Current screen ID
- * @param {object} actionDetails - Additional action details
- * @returns {Promise<object>} - Response with execution result
- */
-export const executeAction = async (actionId, screenId, actionDetails = {}) => {
-  try {
-    const response = await fetch(`${API_BASE_URL}/api/execute-action`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        action_id: actionId,
-        screen_id: screenId,
-        details: actionDetails
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
-    }
-
-    return await response.json();
-  } catch (error) {
-    console.error('Error executing action:', error);
-    
-    return {
-      success: false,
-      error: `Failed to execute action: ${error.message}`
-    };
-  }
-};
-
-/**
- * Send feedback about an action (for LLM learning)
- * @param {string} actionId - ID of the action 
- * @param {boolean} wasSuccessful - Whether the action was successful
- * @param {string} feedback - Optional user feedback
- * @returns {Promise<object>} - Response
- */
-export const sendActionFeedback = async (actionId, wasSuccessful, feedback = '') => {
-  try {
-    const response = await fetch(`${API_BASE_URL}/api/action-feedback`, {
-=======
  * Send feedback about an action (for LLM learning)
  * @param {string} element_id - ID of the element 
  * @param {string} screen_id - Current screen ID
@@ -116,21 +62,14 @@ export const sendActionFeedback = async (actionId, wasSuccessful, feedback = '')
 export const sendActionFeedback = async (element_id, screen_id, wasSuccessful) => {
   try {
     const response = await fetch(`${API_BASE_URL}/action-feedback`, {
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-<<<<<<< HEAD
-        action_id: actionId,
-        successful: wasSuccessful,
-        feedback
-=======
         element_id,
         screen_id,
         success: wasSuccessful
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d
       }),
     });
 
@@ -143,8 +82,6 @@ export const sendActionFeedback = async (element_id, screen_id, wasSuccessful) =
     console.error('Error sending feedback:', error);
     return { success: false };
   }
-<<<<<<< HEAD
-=======
 };
 
 /**
@@ -169,5 +106,4 @@ export const getNavigatorMetrics = async () => {
     console.error('Error getting metrics:', error);
     return { success: false };
   }
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d
 };
