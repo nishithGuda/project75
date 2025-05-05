@@ -205,7 +205,9 @@ class SimpleRLModel(nn.Module):
         self.net = nn.Sequential(
             nn.Linear(input_dim, 16),
             nn.ReLU(),
-            nn.Linear(16, 1)
+            nn.Linear(16, 8),  # Middle layer with 8 units
+            nn.ReLU(),         # Activation function
+            nn.Linear(8, 1)    # Output layer
         )
 
     def forward(self, x):

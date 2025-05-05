@@ -15,10 +15,9 @@ class SimpleRLModel(nn.Module):
         self.net = nn.Sequential(
             nn.Linear(input_dim, 16),
             nn.ReLU(),
-            nn.Linear(16, 8),  # This matches your saved model's [8, 16] shape
-            nn.ReLU(),         # Activation between the layers
-            # Final layer matching "net.4.weight" in your saved model
-            nn.Linear(8, 1)
+            nn.Linear(16, 8),  # Add this middle layer
+            nn.ReLU(),         # Add activation
+            nn.Linear(8, 1)    # Final layer
         )
 
     def forward(self, x):

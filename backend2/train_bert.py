@@ -8,12 +8,6 @@ import os
 import time
 import sys
 
-<<<<<<< HEAD
-json_path = "processed_data/training/llm_training_data.json"
-epochs = 20
-batch_size = 64
-lr = 0.001
-=======
 print(f"CUDA available: {torch.cuda.is_available()}")
 print(f"CUDA device count: {torch.cuda.device_count()}")
 if torch.cuda.is_available():
@@ -24,7 +18,6 @@ json_path = "processed_data/training/llm_training_data.json"
 epochs = 20
 batch_size = 32
 lr = 5e-5
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d
 train_split = 0.85
 
 # Print dataset info for debugging
@@ -61,11 +54,6 @@ for epoch in range(epochs):
     model.train()
     train_loss = 0
     batch_count = 0
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d
     for i, batch in enumerate(train_loader):
         input_ids = batch["input_ids"].to(device)
         attention_mask = batch["attention_mask"].to(device)
@@ -80,16 +68,6 @@ for epoch in range(epochs):
 
         train_loss += loss.item()
         batch_count += 1
-<<<<<<< HEAD
-        
-        if (i + 1) % 10 == 0:
-            elapsed = time.time() - start_time
-            print(f"Epoch {epoch+1}/{epochs} | Batch {i+1}/{len(train_loader)} | Loss: {loss.item():.4f} | Time: {elapsed:.2f}s", flush=True)
-            sys.stdout.flush()
-    
-    avg_training_loss = train_loss / batch_count
-    
-=======
 
         if (i + 1) % 10 == 0:
             elapsed = time.time() - start_time
@@ -99,7 +77,6 @@ for epoch in range(epochs):
 
     avg_training_loss = train_loss / batch_count
 
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d
     # Validation phase
     model.eval()
     val_loss = 0
@@ -118,15 +95,6 @@ for epoch in range(epochs):
             preds = (torch.sigmoid(logits) > 0.5).float()
             correct += (preds == labels).sum().item()
             total += labels.size(0)
-<<<<<<< HEAD
-    
-    avg_val_loss = val_loss / len(val_loader)
-    val_acc = correct / total
-    
-    epoch_time = time.time() - start_time
-    print(f"Epoch {epoch+1}/{epochs} | Train Loss: {avg_training_loss:.4f} | Val Loss: {avg_val_loss:.4f} | Val Accuracy: {val_acc:.4f} | Time: {epoch_time:.2f}s", flush=True)
-    
-=======
 
     avg_val_loss = val_loss / len(val_loader)
     val_acc = correct / total
@@ -134,7 +102,6 @@ for epoch in range(epochs):
     epoch_time = time.time() - start_time
     print(f"Epoch {epoch+1}/{epochs} | Train Loss: {avg_training_loss:.4f} | Val Loss: {avg_val_loss:.4f} | Val Accuracy: {val_acc:.4f} | Time: {epoch_time:.2f}s", flush=True)
 
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d
     # Save a checkpoint after each epoch
     checkpoint_path = os.path.join("model", f"checkpoint_epoch_{epoch+1}.pt")
     os.makedirs("model", exist_ok=True)
@@ -150,8 +117,4 @@ for epoch in range(epochs):
 
 os.makedirs("model", exist_ok=True)
 torch.save(model.state_dict(), "model/llm_bert_model.pt")
-<<<<<<< HEAD
 print("Model Saved to model/llm_bert_model.pt", flush=True)
-=======
-print("Model Saved to model/llm_bert_model.pt", flush=True)
->>>>>>> 6464533d2d85f9f254190f2eb0ef40e2f639f40d

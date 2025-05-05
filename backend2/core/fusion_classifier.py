@@ -113,14 +113,16 @@ class HybridNavigator(UINavigator):
         # Get BERT predictions for all elements
         bert_scores = self._get_bert_scores(query, elements)
 
-        for elem in elements:
+        for idx, elem in enumerate(elements):
             # Get scores from different sources
             vector_score = elem.get("vector_score", 0.5)
             llm_score = elem.get("llm_confidence", 0.5)
             action_confidence = elem.get("action_confidence", 0.7)
 
-            # Get element ID
-            element_id = elem.get("id", "unknown")
+            # Ensure element ID is valid
+            element_id = elem.get("id")
+            if not element_id:
+                element_id = f"fallback-{elem.get('type', 'unknown')}-{idx}-{int(time.time() * 1000)}"
 
             # Get BERT score
             bert_score = bert_scores.get(element_id, 0.5)
@@ -132,13 +134,10 @@ class HybridNavigator(UINavigator):
                 history = self.history[history_key]
                 interactions = history.get("interactions", 0)
                 successes = history.get("successes", 0)
-
                 if interactions > 0:
-                    # Calculate success rate with a prior
                     history_score = (successes + 1) / (interactions + 2)
 
-            # Apply weighting to combine scores
-            # Distribute weights among all components
+            # Weighted fusion of all scores
             llm_weight = 0.30
             vector_weight = 0.10
             bert_weight = 0.30
@@ -153,35 +152,22 @@ class HybridNavigator(UINavigator):
                 history_weight * history_score
             )
 
-            # Apply RL model adjustment
+            # Optional RL adjustment
             if self.rl_model is not None:
                 try:
                     with torch.no_grad():
-                        # Get model device
                         model_device = next(self.rl_model.parameters()).device
-
-                        # For the existing model architecture, we only use the combined score
                         features = torch.tensor(
                             [[combined_score]], dtype=torch.float).to(model_device)
-
-                        # Get RL adjustment
                         adjustment = self.rl_model(features)
-
-                        # Move result to CPU before calling item()
                         adjustment_value = adjustment.cpu().item()
-
-                        # Blend original score with RL adjustment (70/30 blend)
                         combined_score = 0.7 * combined_score + 0.3 * adjustment_value
                 except Exception as e:
                     print(f"Error applying RL model: {e}")
 
-            # Get action type from element or default to click
             action_type = elem.get("action_type", "click")
-
-            # Get action parameters if available
             action_params = elem.get("action_parameters", None)
 
-            # Create action object
             action = {
                 "id": element_id,
                 "type": elem.get("type", "unknown"),
@@ -189,7 +175,6 @@ class HybridNavigator(UINavigator):
                 "confidence": round(float(combined_score), 4),
                 "action_type": action_type,
                 "reasoning": elem.get("reasoning", ""),
-                # Include individual scores for transparency
                 "llm_score": round(float(llm_score), 4),
                 "vector_score": round(float(vector_score), 4),
                 "bert_score": round(float(bert_score), 4),
@@ -197,15 +182,16 @@ class HybridNavigator(UINavigator):
                 "history_score": round(float(history_score), 4)
             }
 
-            # Add action parameters if available
             if action_params:
                 action["action_parameters"] = action_params
 
             actions.append(action)
 
-        # Sort by confidence
-        actions.sort(key=lambda x: x["confidence"], reverse=True)
+        # Debug print to verify every action has a valid ID
+        for a in actions:
+            assert a.get("id"), f"Missing ID in action: {a}"
 
+        actions.sort(key=lambda x: x["confidence"], reverse=True)
         return actions
 
     def _get_bert_scores(self, query, elements):

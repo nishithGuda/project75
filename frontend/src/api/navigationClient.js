@@ -1,29 +1,20 @@
-// Existing navigationClient.js with updates for new backend
+import html2canvas from "html2canvas";
 const API_BASE_URL = 'http://localhost:8000';
 
 /**
- * Process a natural language query with visual data using the LLM
- * @param {string} query - Natural language query from the user
- * @param {string} screenshot - Base64 encoded screenshot
- * @param {object} screenMetadata - Current screen metadata
+ * Process a navigation query with UI context
+ * @param {string} query - Natural language user query
+ * @param {object} uiContext - Information about current UI state
  * @returns {Promise<object>} - Response with suggested actions
  */
-export const processQueryWithVisual = async (query, screenshot, screenMetadata) => {
+export const processNavigationQuery = async (query, screenMetadata) => {
   try {
-    // Create the payload with all available information
     const payload = {
       query,
       screen_metadata: screenMetadata
     };
     
-    // Only include screenshot if available (it can be large)
-    if (screenshot) {
-      payload.screenshot = screenshot;
-    }
-    
-    console.log('Sending query to LLM backend:', query);
-    
-    // Send request to the LLM backend
+    // Send to backend
     const response = await fetch(`${API_BASE_URL}/process-query-visual`, {
       method: 'POST',
       headers: {
@@ -36,31 +27,43 @@ export const processQueryWithVisual = async (query, screenshot, screenMetadata) 
       throw new Error(`API error: ${response.status}`);
     }
 
-    const result = await response.json();
-    console.log('Received response from LLM:', result);
-    
-    return result;
+    return await response.json();
   } catch (error) {
-    console.error('Error processing visual query:', error);
+    console.error('Error processing query:', error);
     
-    // Return error information
     return {
       success: false,
-      error: `Failed to connect to LLM backend: ${error.message}`,
+      error: `Navigation error: ${error.message}`,
       actions: []
     };
   }
 };
 
 /**
- * Send feedback about an action (for LLM learning)
- * @param {string} element_id - ID of the element 
- * @param {string} screen_id - Current screen ID
+ * Send feedback about an action (for learning)
+ * @param {string} actionId - ID of the action
+ * @param {string} elementId - ID of the element
+ * @param {string} screenContext - Context identifier for the screen
  * @param {boolean} wasSuccessful - Whether the action was successful
+ * @param {object} additionalData - Any additional feedback data
  * @returns {Promise<object>} - Response
  */
-export const sendActionFeedback = async (element_id, screen_id, wasSuccessful) => {
+export const sendActionFeedback = async (element_id, screen_id, wasSuccessful, action_type = null) => {
   try {
+    // Make sure element_id has a value
+    if (!element_id) {
+      console.warn("Missing element_id in feedback, using fallback");
+      element_id = "unknown-element";
+    }
+    
+    // Log what we're sending for debugging
+    console.log("Sending feedback:", {
+      element_id,
+      screen_id,
+      success: wasSuccessful,
+      action_type
+    });
+    
     const response = await fetch(`${API_BASE_URL}/action-feedback`, {
       method: 'POST',
       headers: {
@@ -69,12 +72,14 @@ export const sendActionFeedback = async (element_id, screen_id, wasSuccessful) =
       body: JSON.stringify({
         element_id,
         screen_id,
-        success: wasSuccessful
+        success: wasSuccessful,
+        action_type
       }),
     });
 
     if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
+      const errorText = await response.text();
+      throw new Error(`API error: ${response.status} - ${errorText}`);
     }
 
     return await response.json();
@@ -85,10 +90,10 @@ export const sendActionFeedback = async (element_id, screen_id, wasSuccessful) =
 };
 
 /**
- * Get metrics about the LLM navigator's performance
+ * Get metrics about the navigation system's performance
  * @returns {Promise<object>} - Response with metrics
  */
-export const getNavigatorMetrics = async () => {
+export const getNavigationMetrics = async () => {
   try {
     const response = await fetch(`${API_BASE_URL}/metrics`, {
       method: 'GET',
@@ -105,5 +110,59 @@ export const getNavigatorMetrics = async () => {
   } catch (error) {
     console.error('Error getting metrics:', error);
     return { success: false };
+  }
+};
+
+/**
+ * Capture a screenshot of the current page
+ * @returns {Promise<string|null>} - Base64-encoded screenshot or null if failed
+ */
+export const captureScreenshot = async () => {
+  try {
+    // Import html2canvas dynamically
+    const html2canvas = await import('html2canvas');
+    
+    // Capture the screenshot
+    const canvas = await html2canvas.default(document.body, {
+      useCORS: true,
+      allowTaint: true,
+      scale: 0.25,
+      logging: false,
+      backgroundColor: null,
+      width: window.innerWidth,
+      height: window.innerHeight,
+      x: 0,
+      y: 0,
+      onclone: (documentClone) => {
+        // Remove problematic CSS properties
+        const styleElements = documentClone.querySelectorAll('style');
+        styleElements.forEach((style) => {
+          if (style.textContent.includes('oklch')) {
+            style.textContent = style.textContent.replace(
+              /oklch\([^)]+\)/g,
+              'rgb(200, 200, 200)'
+            );
+          }
+        });
+        
+        // Also remove problematic elements
+        const problematicElements = documentClone.querySelectorAll('iframe, canvas, video');
+        problematicElements.forEach(el => {
+          el.remove();
+        });
+      },
+      ignoreElements: (element) => {
+        // Ignore problematic elements
+        return element.tagName === 'IFRAME' || 
+               element.tagName === 'CANVAS';
+      },
+    });
+
+    // Convert to data URL with lower quality
+    const dataUrl = canvas.toDataURL('image/jpeg', 0.3);
+    return dataUrl;
+  } catch (error) {
+    console.error('Error capturing screenshot:', error);
+    return null;
   }
 };
