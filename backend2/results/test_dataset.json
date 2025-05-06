@@ -1,0 +1,5542 @@
+[
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Show my checking account balance",
+    "elements": [
+      {
+        "id": "account-balance-btn",
+        "type": "button",
+        "text": "View Balance",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "Transactions",
+        "bounds": [
+          350,
+          200,
+          550,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "account-balance-btn"
+  },
+  {
+    "query": "Transfer money from savings to checking",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "View my recent transactions",
+    "elements": [
+      {
+        "id": "transactions-btn",
+        "type": "button",
+        "text": "View Transactions",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "account-dropdown",
+        "type": "dropdown",
+        "text": "Select Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "date-filter",
+        "type": "dropdown",
+        "text": "Date Range",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transactions-btn"
+  },
+  {
+    "query": "Pay my credit card bill",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "payments-btn"
+  },
+  {
+    "query": "Find nearby ATMs",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Change my password",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Set up a recurring transfer",
+    "elements": [
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer Money",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "from-account",
+        "type": "dropdown",
+        "text": "From Account",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "to-account",
+        "type": "dropdown",
+        "text": "To Account",
+        "bounds": [
+          350,
+          100,
+          550,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "amount-input",
+        "type": "input",
+        "text": "Amount",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "transfer-btn"
+  },
+  {
+    "query": "Show my spending breakdown",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Download my account statement",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  },
+  {
+    "query": "Activate my new debit card",
+    "elements": [
+      {
+        "id": "accounts-btn",
+        "type": "button",
+        "text": "My Accounts",
+        "bounds": [
+          100,
+          100,
+          300,
+          150
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "transfer-btn",
+        "type": "button",
+        "text": "Transfer",
+        "bounds": [
+          100,
+          200,
+          300,
+          250
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "payments-btn",
+        "type": "button",
+        "text": "Bill Pay",
+        "bounds": [
+          100,
+          300,
+          300,
+          350
+        ],
+        "clickable": true,
+        "enabled": true
+      },
+      {
+        "id": "settings-btn",
+        "type": "button",
+        "text": "Settings",
+        "bounds": [
+          100,
+          400,
+          300,
+          450
+        ],
+        "clickable": true,
+        "enabled": true
+      }
+    ],
+    "correct_element_id": "accounts-btn"
+  }
+]

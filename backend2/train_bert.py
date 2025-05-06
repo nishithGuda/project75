@@ -18,7 +18,7 @@ json_path = "processed_data/training/llm_training_data.json"
 epochs = 20
 batch_size = 32
 lr = 5e-5
-train_split = 0.85
+train_split = 0.90
 
 # Print dataset info for debugging
 dataset = LLMQueryElementDataset(json_path)

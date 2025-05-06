@@ -50,17 +50,6 @@ export const executeAction = async (action, elementMetadata) => {
       return { success: false, error: error.message };
     }
   };
-// Simple function to perform basic actions
-const performBasicAction = async (element, action) => {
-  try {
-    // Default to click for most elements
-    element.click();
-    return { success: true };
-  } catch (error) {
-    console.error("Error performing action:", error);
-    return { success: false, error: error.message };
-  }
-};
   
   // Find element in DOM based on metadata
  // Improved element finding function

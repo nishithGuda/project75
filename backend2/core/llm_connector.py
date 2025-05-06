@@ -10,7 +10,7 @@ class MistralConnector:
     """Connects to Mistral AI API for LLM-based UI element reasoning"""
 
     def __init__(self, api_key: Optional[str] = None,
-                 model: str = "mistral-small-3.1-24b-instruct"):
+                 model: str = "mistralai/Mistral-Small-3.1-24B-Instruct-2503"):
         # Get API key from environment or parameter
         self.api_key = api_key or os.environ.get("MISTRAL_API_KEY")
         if not self.api_key:

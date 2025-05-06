@@ -1,1 +1,18 @@
+/* Import the correct fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&family=Kanchenjunga:wght@400;500;600;700&family=Roboto+Mono:wght@300&display=swap');
 @import "tailwindcss";
+
+/* Fix the theme configuration */
+@theme {
+    --font-sans: "Inconsolata", monospace;
+    --font-feature-settings: "cv02", "cv03", "cv04", "cv11"; 
+    --font-variation-settings: "wdth" 125, "opsz" 32; 
+    
+    /* Tech-minimal color palette */
+    --color-background: #EEEFF1;
+    --color-primary: #0F172A;
+    --color-secondary: #475569;
+    --color-accent: #14B8A6;
+    --color-text-primary: #1E293B;
+    --color-text-secondary: #64748B;
+}

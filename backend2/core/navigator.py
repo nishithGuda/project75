@@ -63,7 +63,13 @@ class MistralHFConnector:
             user_content += "Current Screen Context:\n"
             user_content += f"- Screen ID: {screen_context.get('screen_id', 'unknown')}\n"
             user_content += f"- Path: {screen_context.get('path', 'unknown')}\n\n"
-
+            if hasattr(self, '_get_recent_queries') and callable(self._get_recent_queries):
+                recent_queries = self._get_recent_queries(
+                    screen_context.get('screen_id', 'unknown'))
+                if recent_queries:
+                    user_content += "\nRecent Queries:\n"
+                    for q in recent_queries:
+                        user_content += f"- {q}\n"
         # Add element descriptions
         user_content += "Available UI Elements:\n\n"
 
@@ -279,6 +285,8 @@ class UINavigator:
 
         try:
             # Extract elements from metadata
+            screen_id = screen_metadata.get("screen_id", "unknown")
+            self._update_recent_queries(screen_id, query)
             elements = screen_metadata.get("elements", [])
             if not elements:
                 return {
@@ -664,3 +672,24 @@ class UINavigator:
         except Exception as e:
             print(f"Error loading history: {e}")
             self.history = {}
+
+    def _get_recent_queries(self, screen_id: str) -> List[str]:
+        """Get recent queries for a screen to provide context to LLM"""
+        if not hasattr(self, 'recent_queries'):
+            self.recent_queries = {}
+
+        return self.recent_queries.get(screen_id, [])
+
+    def _update_recent_queries(self, screen_id: str, query: str) -> None:
+        """Update recent queries list for contextual awareness"""
+        if not hasattr(self, 'recent_queries'):
+            self.recent_queries = {}
+
+        if screen_id not in self.recent_queries:
+            self.recent_queries[screen_id] = []
+
+        # Add current query to history
+        self.recent_queries[screen_id].append(query)
+
+        # Keep only the last 3 queries
+        self.recent_queries[screen_id] = self.recent_queries[screen_id][-3:]

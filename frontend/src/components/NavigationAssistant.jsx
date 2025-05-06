@@ -327,16 +327,19 @@ const NavigationAssistant = () => {
               {result && (
                 <div className="mt-3">
                   {result.success ? (
-                    result.actions && result.actions.length > 0 ? (
+                    result.actions.length > 0 ? (
                       <div>
                         <div className="text-green-600 bg-green-50 p-2 rounded-md mb-2">
                           <p>Found these possible actions:</p>
                         </div>
                         <div className="space-y-2">
-                          {result.actions.slice(0, 3).map((action, index) => (
+                          {/* Show more recommendations (up to 4 instead of 3) */}
+                          {result.actions.slice(0, 4).map((action, index) => (
                             <div
                               key={index}
-                              className="p-2 border rounded-md cursor-pointer hover:bg-blue-50"
+                              className={`p-2 border rounded-md cursor-pointer hover:bg-blue-50 ${
+                                index === 0 ? "border-blue-500" : ""
+                              }`}
                               onClick={() => handleActionClick(action)}
                             >
                               <div className="flex justify-between">
@@ -348,6 +351,16 @@ const NavigationAssistant = () => {
                                 <span className="text-sm text-blue-600">
                                   {Math.round(action.confidence * 100)}% match
                                 </span>
+                              </div>
+                              <div className="flex flex-wrap space-x-2 mt-1 text-xs text-gray-500">
+                                {action.diversity_bonus > 0 && (
+                                  <span className="bg-blue-100 text-blue-800 px-1 rounded">
+                                    New
+                                  </span>
+                                )}
+                                {action.action_type && (
+                                  <span>{action.action_type}</span>
+                                )}
                               </div>
                               {action.reasoning && (
                                 <p className="text-xs text-gray-500 mt-1">
